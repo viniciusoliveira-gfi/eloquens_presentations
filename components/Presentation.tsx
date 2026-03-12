@@ -4,8 +4,6 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import ProgressBar from "./ProgressBar";
 import Navigation from "./Navigation";
 import HeroSlide from "./slides/HeroSlide";
-import EmailMattersSlide from "./slides/EmailMattersSlide";
-import OldPlaybookSlide from "./slides/OldPlaybookSlide";
 import SolutionSlide from "./slides/SolutionSlide";
 import ThreeLevelsSlide from "./slides/ThreeLevelsSlide";
 import VoiceSlide from "./slides/VoiceSlide";
@@ -15,7 +13,7 @@ import ProcessSlide from "./slides/ProcessSlide";
 import ProofSlide from "./slides/ProofSlide";
 import CTASlide from "./slides/CTASlide";
 
-const TOTAL_SLIDES = 11;
+const TOTAL_SLIDES = 9;
 
 export default function Presentation() {
   const [current, setCurrent] = useState(0);
@@ -110,16 +108,14 @@ export default function Presentation() {
         style={{ transform: `translateX(-${current * 100}vw)` }}
       >
         <HeroSlide isActive={current === 0} onNext={next} />
-        <EmailMattersSlide isActive={current === 1} />
-        <OldPlaybookSlide isActive={current === 2} />
-        <ThreeLevelsSlide isActive={current === 3} />
-        <SolutionSlide isActive={current === 4} />
-        <TrustSlide isActive={current === 5} />
-        <VoiceSlide isActive={current === 6} />
-        <HowItWorksSlide isActive={current === 7} />
-        <ProcessSlide isActive={current === 8} />
-        <ProofSlide isActive={current === 9} />
-        <CTASlide isActive={current === 10} />
+        <ThreeLevelsSlide isActive={current === 1} />
+        <SolutionSlide isActive={current === 2} />
+        <TrustSlide isActive={current === 3} />
+        <VoiceSlide isActive={current === 4} />
+        <HowItWorksSlide isActive={current === 5} />
+        <ProcessSlide isActive={current === 6} />
+        <ProofSlide isActive={current === 7} />
+        <CTASlide isActive={current === 8} />
       </div>
     </div>
   );

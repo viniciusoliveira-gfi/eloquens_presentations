@@ -13,8 +13,13 @@ export default function HeroSlide({
 }) {
   return (
     <SlideWrapper isActive={isActive} variant="white">
-      {/* Floating envelopes background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      {/* Floating envelopes background — reset animations on revisit */}
+      <div
+        className={`absolute inset-0 pointer-events-none overflow-hidden transition-opacity duration-700 ${
+          isActive ? "opacity-100" : "opacity-0"
+        }`}
+        key={isActive ? "active" : "inactive"}
+      >
         <div className="absolute top-[15%] left-[10%] animate-float-1">
           <Mail size={48} className="text-brand-accent" strokeWidth={1} />
         </div>
@@ -36,7 +41,7 @@ export default function HeroSlide({
         <div className="mb-8">
           <Image
             src="/eloquens-logo.png"
-            alt="Eloquens AI"
+            alt="Eloquens® AI"
             width={180}
             height={48}
             className="mx-auto"
@@ -57,17 +62,17 @@ export default function HeroSlide({
         <div className="flex items-center gap-8 mb-12">
           <div className="flex flex-col items-center">
             <span className="text-2xl font-bold gradient-text">&lt; 5 min</span>
-            <span className="text-xs text-brand-gray mt-1">Response Time</span>
+            <span className="text-sm text-brand-gray mt-1">Response Time</span>
           </div>
           <div className="w-px h-10 bg-gray-200" />
           <div className="flex flex-col items-center">
             <span className="text-2xl font-bold gradient-text">160+</span>
-            <span className="text-xs text-brand-gray mt-1">Languages</span>
+            <span className="text-sm text-brand-gray mt-1">Languages</span>
           </div>
           <div className="w-px h-10 bg-gray-200" />
           <div className="flex flex-col items-center">
             <span className="text-2xl font-bold gradient-text">24/7</span>
-            <span className="text-xs text-brand-gray mt-1">Always On</span>
+            <span className="text-sm text-brand-gray mt-1">Always On</span>
           </div>
         </div>
 

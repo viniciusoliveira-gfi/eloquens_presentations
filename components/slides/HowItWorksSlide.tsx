@@ -12,7 +12,7 @@ const steps = [
   {
     icon: Settings,
     title: "Set Rules & Tone",
-    desc: "Define how Eloquens should respond, escalate, or close emails.",
+    desc: "Define how Eloquens® AI should respond, escalate, or close emails.",
   },
   {
     icon: Database,
@@ -21,7 +21,7 @@ const steps = [
   },
   {
     icon: Rocket,
-    title: "Let Eloquens Run",
+    title: "Let Eloquens® AI Run",
     desc: "Approve replies or enable auto-send. Start saving hours immediately.",
   },
 ];
@@ -51,7 +51,7 @@ export default function HowItWorksSlide({
             <div key={i} className="clean-card p-6 text-center relative">
               {/* Connector line */}
               {i < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-px bg-gray-300" />
+                <div className="hidden md:block absolute top-1/2 -translate-y-1/2 -right-[13px] w-[26px] h-[2px] bg-gray-300 rounded-full" />
               )}
               <div className="number-badge mx-auto mb-4">{i + 1}</div>
               <div className="icon-box !w-12 !h-12 !rounded-xl mx-auto mb-4">

@@ -3,9 +3,9 @@ import { PHProvider } from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Eloquens AI — Your Inbox. Handled.",
+  title: "Eloquens® AI — Your Inbox. Handled.",
   description:
-    "Stop wasting your best hours on email. Eloquens AI reads, replies, and routes — in your voice, at infinite scale.",
+    "Stop wasting your best hours on email. Eloquens® AI reads, replies, and routes — in your voice, at infinite scale.",
 };
 
 export default function RootLayout({
