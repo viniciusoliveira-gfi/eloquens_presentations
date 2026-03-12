@@ -43,7 +43,7 @@ const levels = [
     level: 3,
     icon: BrainCircuit,
     title: "Autonomous Email Agents",
-    era: "Eloquens",
+    era: "Eloquens®",
     desc: "Reads, understands, replies, takes action. End-to-end resolutions.",
     color: {
       bg: "bg-emerald-50",
@@ -142,7 +142,7 @@ export default function ThreeLevelsSlide({
                     </h3>
                     <span
                       className={`
-                        px-2.5 py-0.5 rounded-full text-xs font-semibold
+                        px-2.5 py-0.5 rounded-full text-sm font-semibold
                         transition-all duration-300
                         ${
                           isSelected
@@ -196,7 +196,7 @@ export default function ThreeLevelsSlide({
 
         {/* Bottom hint */}
         <div className="text-center mt-6">
-          <p className="text-xs text-gray-400 tracking-wide">
+          <p className="text-sm text-gray-400 tracking-wide">
             Click each level to explore
           </p>
         </div>

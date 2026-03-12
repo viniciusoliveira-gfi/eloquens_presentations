@@ -36,7 +36,7 @@ export default function OldPlaybookSlide({
               <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center flex-shrink-0">
                 <Clock size={18} className="text-brand-accent" />
               </div>
-              <p className="text-xs font-semibold text-brand-accent uppercase tracking-wider">
+              <p className="text-sm font-semibold text-brand-accent uppercase tracking-wider">
                 Customers Expect
               </p>
             </div>
@@ -54,7 +54,7 @@ export default function OldPlaybookSlide({
               <div className="w-10 h-10 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center flex-shrink-0">
                 <Timer size={18} className="text-red-400" />
               </div>
-              <p className="text-xs font-semibold text-red-400 uppercase tracking-wider">
+              <p className="text-sm font-semibold text-red-400 uppercase tracking-wider">
                 Businesses Deliver
               </p>
             </div>
@@ -72,7 +72,7 @@ export default function OldPlaybookSlide({
               <div className="w-10 h-10 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center flex-shrink-0">
                 <TrendingDown size={18} className="text-red-400" />
               </div>
-              <p className="text-xs font-semibold text-red-400 uppercase tracking-wider">
+              <p className="text-sm font-semibold text-red-400 uppercase tracking-wider">
                 The Result
               </p>
             </div>

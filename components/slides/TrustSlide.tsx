@@ -19,7 +19,7 @@ const pillars = [
   {
     icon: UserCheck,
     title: "Human-in-the-Loop",
-    desc: "When Eloquens hits a knowledge gap, it escalates to a human. Then it learns from the answer. A self-learning engine that gets smarter with every interaction.",
+    desc: "When Eloquens® AI hits a knowledge gap, it escalates to a human. Then it learns from the answer. A self-learning engine that gets smarter with every interaction.",
     highlight: "Self-learning, always improving",
   },
 ];
@@ -34,7 +34,7 @@ export default function TrustSlide({
       <div className="w-full max-w-5xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-sm font-semibold text-brand-accent uppercase tracking-wider mb-3">
-            Eloquens is Built for
+            Eloquens® AI is Built for
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-4">
             End-to-End{" "}
@@ -54,7 +54,7 @@ export default function TrustSlide({
               <p className="text-sm text-brand-gray leading-relaxed mb-4">
                 {pillar.desc}
               </p>
-              <span className="inline-block px-3 py-1 rounded-full bg-blue-50 text-xs font-semibold text-brand-accent">
+              <span className="inline-block px-3 py-1 rounded-full bg-blue-50 text-sm font-semibold text-brand-accent">
                 {pillar.highlight}
               </span>
             </div>
@@ -65,7 +65,7 @@ export default function TrustSlide({
           <div className="inline-block max-w-2xl">
             <div className="w-12 h-px bg-gradient-to-r from-transparent via-brand-accent to-transparent mx-auto mb-5 opacity-40" />
             <p className="text-base md:text-lg font-semibold text-brand-dark tracking-tight">
-              Eloquens AI doesn&apos;t just draft&thinsp;—&thinsp;
+              Eloquens® AI doesn&apos;t just draft&thinsp;—&thinsp;
               <span className="gradient-text">it sends.</span>
             </p>
             <p className="text-sm text-brand-gray mt-2 leading-relaxed">

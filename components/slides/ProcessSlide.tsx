@@ -40,15 +40,15 @@ function EmailReceivedPanel() {
         {/* email header bar */}
         <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100 bg-gray-50/60">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full bg-brand-accent/10 flex items-center justify-center text-xs font-bold text-brand-accent">
+            <div className="w-8 h-8 rounded-full bg-brand-accent/10 flex items-center justify-center text-sm font-bold text-brand-accent">
               BC
             </div>
             <div>
               <p className="text-sm font-semibold text-brand-dark">Brett Coleman</p>
-              <p className="text-xs text-brand-gray">Exinda · Account Manager</p>
+              <p className="text-sm text-brand-gray">Exinda · Account Manager</p>
             </div>
           </div>
-          <span className="px-2.5 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-bold uppercase tracking-wide">
+          <span className="px-2.5 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-bold uppercase tracking-wide">
             New
           </span>
         </div>
@@ -72,7 +72,7 @@ function EmailReceivedPanel() {
           <p className="text-brand-gray">Best regards,<br />Brett Coleman</p>
         </div>
         {/* bottom bar */}
-        <div className="px-5 py-3 border-t border-gray-100 bg-gray-50/40 flex items-center gap-3 text-xs text-brand-gray">
+        <div className="px-5 py-3 border-t border-gray-100 bg-gray-50/40 flex items-center gap-3 text-sm text-brand-gray">
           <Clock size={12} /> <span>Received 2 min ago</span>
           <span className="w-px h-3 bg-gray-200" />
           <Mail size={12} /> <span>brett@exinda.com</span>
@@ -92,7 +92,7 @@ function SmartFiltersPanel() {
             <Sparkles size={16} className="text-brand-accent" />
             Email Analysis
           </span>
-          <span className="px-3 py-1 rounded-full bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wide">
+          <span className="px-3 py-1 rounded-full bg-green-100 text-green-700 text-sm font-bold uppercase tracking-wide">
             Approved for Response
           </span>
         </div>
@@ -122,7 +122,7 @@ function SmartFiltersPanel() {
             },
           ].map((row, i) => (
             <div key={i} className="flex items-center justify-between">
-              <span className="text-xs text-brand-gray uppercase tracking-wide font-medium">
+              <span className="text-sm text-brand-gray uppercase tracking-wide font-medium">
                 {row.label}
               </span>
               <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg ${row.bg}`}>
@@ -133,7 +133,7 @@ function SmartFiltersPanel() {
           ))}
         </div>
         <div className="px-5 py-3 border-t border-gray-100 bg-gray-50/40">
-          <p className="text-xs text-brand-gray italic">
+          <p className="text-sm text-brand-gray italic">
             &ldquo;Business email requiring a scheduling follow-up with pricing
             clarification.&rdquo;
           </p>
@@ -164,20 +164,20 @@ function KnowledgeBasePanel() {
         <div className="px-5 py-4 flex gap-6 border-b border-gray-100">
           <div className="text-center">
             <p className="text-2xl font-bold gradient-text">9</p>
-            <p className="text-[10px] text-brand-gray uppercase tracking-wide">
+            <p className="text-sm text-brand-gray uppercase tracking-wide">
               Sources Searched
             </p>
           </div>
           <div className="text-center">
             <p className="text-2xl font-bold gradient-text">8</p>
-            <p className="text-[10px] text-brand-gray uppercase tracking-wide">
+            <p className="text-sm text-brand-gray uppercase tracking-wide">
               Matches Found
             </p>
           </div>
         </div>
         {/* top matches */}
         <div className="px-5 py-4 space-y-3">
-          <p className="text-[10px] text-brand-gray uppercase tracking-wide font-medium mb-1">
+          <p className="text-sm text-brand-gray uppercase tracking-wide font-medium mb-1">
             Top Matches
           </p>
           {sources.map((s, i) => (
@@ -198,7 +198,7 @@ function KnowledgeBasePanel() {
                     style={{ width: `${s.match}%` }}
                   />
                 </div>
-                <span className="text-xs font-bold text-brand-accent">
+                <span className="text-sm font-bold text-brand-accent">
                   {s.match}%
                 </span>
               </div>
@@ -279,7 +279,7 @@ function RoutingPanel() {
         {/* details */}
         <div className="px-5 py-4 border-t border-gray-100 space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-xs text-brand-gray uppercase tracking-wide font-medium">
+            <span className="text-sm text-brand-gray uppercase tracking-wide font-medium">
               CC
             </span>
             <span className="flex items-center gap-1.5 text-sm font-medium text-brand-dark">
@@ -288,7 +288,7 @@ function RoutingPanel() {
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-xs text-brand-gray uppercase tracking-wide font-medium">
+            <span className="text-sm text-brand-gray uppercase tracking-wide font-medium">
               Confidence
             </span>
             <div className="flex items-center gap-2">
@@ -314,13 +314,13 @@ function ResponsePanel() {
             <PenTool size={16} className="text-brand-accent" />
             Draft Reply
           </span>
-          <span className="px-2.5 py-1 rounded-full bg-purple-100 text-purple-700 text-[10px] font-bold uppercase tracking-wide flex items-center gap-1">
+          <span className="px-2.5 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-bold uppercase tracking-wide flex items-center gap-1">
             <Sparkles size={10} />
-            MyVoice™
+            MyVoice®
           </span>
         </div>
         {/* meta */}
-        <div className="px-5 py-3 border-b border-gray-50 space-y-1.5 text-xs text-brand-gray">
+        <div className="px-5 py-3 border-b border-gray-50 space-y-1.5 text-sm text-brand-gray">
           <p>
             <span className="font-medium text-brand-slate">To:</span> Brett
             Coleman &lt;brett@exinda.com&gt;
@@ -353,10 +353,10 @@ function ResponsePanel() {
         </div>
         {/* footer */}
         <div className="px-5 py-3 border-t border-gray-100 bg-gray-50/40 flex items-center justify-between">
-          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 text-xs font-medium text-brand-accent">
+          <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 text-sm font-medium text-brand-accent">
             Tone: Professional · Warm
           </span>
-          <button className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-brand-accent text-white text-xs font-semibold shadow-sm">
+          <button className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-brand-accent text-white text-sm font-semibold shadow-sm">
             <SendIcon size={12} />
             Send
           </button>
@@ -417,7 +417,7 @@ export default function ProcessSlide({
             Inside the Engine
           </p>
           <h2 className="text-3xl md:text-4xl font-bold text-brand-dark">
-            How Eloquens{" "}
+            How Eloquens® AI{" "}
             <span className="gradient-text">Thinks & Decides</span>
           </h2>
         </div>
@@ -434,7 +434,7 @@ export default function ProcessSlide({
                     e.stopPropagation();
                     setActiveStep(i);
                   }}
-                  className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold transition-all ${
+                  className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-sm font-semibold transition-all ${
                     isCurrent
                       ? "bg-brand-accent text-white shadow-md shadow-blue-200"
                       : isCompleted
@@ -499,7 +499,7 @@ export default function ProcessSlide({
             Previous
           </button>
 
-          <span className="text-xs text-brand-gray font-medium px-2">
+          <span className="text-sm text-brand-gray font-medium px-2">
             {activeStep + 1} / {steps.length}
           </span>
 

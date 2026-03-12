@@ -40,16 +40,16 @@ export default function SolutionSlide({
             The Solution
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-4">
-            Meet <span className="gradient-text">Eloquens</span>
+            Meet <span className="gradient-text">Eloquens® AI</span>
           </h2>
           <p className="text-lg text-brand-gray max-w-xl mx-auto">
             The best email assistant in the world
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Left: Capability cards */}
-          <div className="space-y-3">
+        <div className="grid md:grid-cols-5 gap-8 items-center">
+          {/* Left: Capability cards — 3 of 5 cols */}
+          <div className="md:col-span-3 space-y-3">
             {capabilities.map((cap, i) => (
               <div
                 key={i}
@@ -63,7 +63,7 @@ export default function SolutionSlide({
                     <h3 className="font-bold text-brand-dark text-sm">
                       {cap.title}
                     </h3>
-                    <p className="text-xs text-brand-gray">
+                    <p className="text-sm text-brand-gray">
                       {cap.summary}
                     </p>
                   </div>
@@ -72,12 +72,12 @@ export default function SolutionSlide({
             ))}
           </div>
 
-          {/* Right: Product Screenshot */}
-          <div className="flex justify-center">
+          {/* Right: Product Screenshot — 2 of 5 cols */}
+          <div className="md:col-span-2 flex justify-center">
             <div className="rounded-2xl border border-gray-200 shadow-xl overflow-hidden bg-white">
               <Image
                 src="/meet-eloquens.png"
-                alt="Eloquens AI Product"
+                alt="Eloquens® AI Product"
                 width={520}
                 height={380}
                 className="w-full h-auto"
