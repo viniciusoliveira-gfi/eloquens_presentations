@@ -12,7 +12,7 @@ export default function CTASlide({
   return (
     <SlideWrapper isActive={isActive} variant="soft">
       <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
-        <div className="mb-4 md:mb-8">
+        <div className="mb-3 md:mb-8">
           <Image
             src="/eloquens-logo.png"
             alt="Eloquens® AI"
@@ -22,16 +22,16 @@ export default function CTASlide({
           />
         </div>
 
-        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-3 md:mb-6">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-2 md:mb-6">
           Email, Finally{" "}
           <span className="gradient-text">Handled.</span>
         </h2>
 
-        <p className="text-sm md:text-xl text-brand-gray mb-6 md:mb-10 max-w-xl">
+        <p className="text-sm md:text-xl text-brand-gray mb-4 md:mb-10 max-w-xl">
           Start your free trial today. No credit card required.
         </p>
 
-        <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 mb-8 md:mb-12">
+        <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 mb-5 md:mb-12">
           <a
             href="https://eloquens.ai"
             target="_blank"

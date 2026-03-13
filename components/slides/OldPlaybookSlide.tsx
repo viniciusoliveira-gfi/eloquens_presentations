@@ -127,7 +127,7 @@ export default function OldPlaybookSlide({
         <div className="text-center pt-1 md:pt-2">
           <div className="inline-block max-w-2xl">
             <div className="w-12 h-px bg-gradient-to-r from-transparent via-brand-accent to-transparent mx-auto mb-2 md:mb-5 opacity-40" />
-            <p className="text-xs md:text-base lg:text-lg text-brand-slate leading-relaxed whitespace-nowrap">
+            <p className="text-xs md:text-base lg:text-lg text-brand-slate leading-relaxed">
               The old playbook doesn&apos;t work.{" "}
               <span className="font-semibold gradient-text">
                 Businesses need something fundamentally different.

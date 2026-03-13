@@ -44,7 +44,7 @@ function EmailReceivedPanel() {
               BC
             </div>
             <div>
-              <p className="text-xs md:text-xs md:text-sm font-semibold text-brand-dark">Brett Coleman</p>
+              <p className="text-xs md:text-sm font-semibold text-brand-dark">Brett Coleman</p>
               <p className="text-xs md:text-sm text-brand-gray">Exinda · Account Manager</p>
             </div>
           </div>
@@ -54,12 +54,12 @@ function EmailReceivedPanel() {
         </div>
         {/* subject */}
         <div className="px-3 py-2 md:px-5 md:py-3 border-b border-gray-50">
-          <p className="text-xs md:text-xs md:text-sm font-semibold text-brand-dark leading-snug">
+          <p className="text-xs md:text-sm font-semibold text-brand-dark leading-snug">
             RE: Exinda — Renewal Status for 2024-2025 Support Contract
           </p>
         </div>
         {/* body */}
-        <div className="px-3 py-3 md:px-5 md:py-4 text-xs md:text-sm text-brand-slate leading-relaxed space-y-2">
+        <div className="px-3 py-3 md:px-5 md:py-4 text-xs md:text-sm text-brand-slate leading-snug md:leading-relaxed space-y-2">
           <p>Hi Team,</p>
           <p>
             Following up on our last conversation regarding the 2024-2025 renewal.
@@ -88,7 +88,7 @@ function SmartFiltersPanel() {
     <div className="w-full max-w-lg mx-auto px-1 md:px-0">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
         <div className="px-3 py-3 md:px-5 md:py-4 border-b border-gray-100 flex items-center justify-between">
-          <span className="text-xs md:text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
+          <span className="text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
             <Sparkles size={16} className="text-brand-accent" />
             Email Analysis
           </span>
@@ -122,7 +122,7 @@ function SmartFiltersPanel() {
             },
           ].map((row, i) => (
             <div key={i} className="flex items-center justify-between">
-              <span className="text-[10px] md:text-xs md:text-sm text-brand-gray uppercase tracking-wide font-medium">
+              <span className="text-[10px] md:text-sm text-brand-gray uppercase tracking-wide font-medium">
                 {row.label}
               </span>
               <div className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg ${row.bg}`}>
@@ -133,7 +133,7 @@ function SmartFiltersPanel() {
           ))}
         </div>
         <div className="px-3 py-2 md:px-5 md:py-3 border-t border-gray-100 bg-gray-50/40">
-          <p className="text-xs md:text-xs md:text-sm text-brand-gray italic">
+          <p className="text-xs md:text-sm text-brand-gray italic">
             &ldquo;Business email requiring a scheduling follow-up with pricing
             clarification.&rdquo;
           </p>
@@ -154,7 +154,7 @@ function KnowledgeBasePanel() {
     <div className="w-full max-w-lg mx-auto px-1 md:px-0">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
         <div className="px-3 py-3 md:px-5 md:py-4 border-b border-gray-100 flex items-center justify-between">
-          <span className="text-xs md:text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
+          <span className="text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
             <Database size={16} className="text-brand-accent" />
             Knowledge Search
           </span>
@@ -177,7 +177,7 @@ function KnowledgeBasePanel() {
         </div>
         {/* top matches */}
         <div className="px-3 py-3 md:px-5 md:py-4 space-y-3">
-          <p className="text-[10px] md:text-xs md:text-sm text-brand-gray uppercase tracking-wide font-medium mb-1">
+          <p className="text-[10px] md:text-sm text-brand-gray uppercase tracking-wide font-medium mb-1">
             Top Matches
           </p>
           {sources.map((s, i) => (
@@ -243,7 +243,7 @@ function RoutingPanel() {
     <div className="w-full max-w-lg mx-auto px-1 md:px-0">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
         <div className="px-3 py-3 md:px-5 md:py-4 border-b border-gray-100">
-          <span className="text-xs md:text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
+          <span className="text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
             <GitBranch size={16} className="text-brand-accent" />
             Routing Decision
           </span>
@@ -279,7 +279,7 @@ function RoutingPanel() {
         {/* details */}
         <div className="px-3 py-3 md:px-5 md:py-4 border-t border-gray-100 space-y-3">
           <div className="flex items-center justify-between">
-            <span className="text-[10px] md:text-xs md:text-sm text-brand-gray uppercase tracking-wide font-medium">
+            <span className="text-[10px] md:text-sm text-brand-gray uppercase tracking-wide font-medium">
               CC
             </span>
             <span className="flex items-center gap-1.5 text-sm font-medium text-brand-dark">
@@ -288,7 +288,7 @@ function RoutingPanel() {
             </span>
           </div>
           <div className="flex items-center justify-between">
-            <span className="text-[10px] md:text-xs md:text-sm text-brand-gray uppercase tracking-wide font-medium">
+            <span className="text-[10px] md:text-sm text-brand-gray uppercase tracking-wide font-medium">
               Confidence
             </span>
             <div className="flex items-center gap-2">
@@ -310,7 +310,7 @@ function ResponsePanel() {
     <div className="w-full max-w-lg mx-auto px-1 md:px-0">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
         <div className="px-3 py-2 md:px-5 md:py-3 border-b border-gray-100 flex items-center justify-between bg-gray-50/40">
-          <span className="text-xs md:text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
+          <span className="text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
             <PenTool size={16} className="text-brand-accent" />
             Draft Reply
           </span>
@@ -331,7 +331,7 @@ function ResponsePanel() {
           </p>
         </div>
         {/* body */}
-        <div className="px-3 py-3 md:px-5 md:py-4 text-xs md:text-sm text-brand-slate leading-relaxed space-y-2">
+        <div className="px-3 py-3 md:px-5 md:py-4 text-xs md:text-sm text-brand-slate leading-snug md:leading-relaxed space-y-2">
           <p>Hi Brett,</p>
           <p>
             Thank you for getting back to us — great to hear you&apos;d like to move
@@ -412,7 +412,7 @@ export default function ProcessSlide({
     <SlideWrapper isActive={isActive} variant="white">
       <div className="w-full max-w-5xl mx-auto flex flex-col h-full justify-center py-4 md:py-10">
         {/* Header */}
-        <div className="text-center mb-3 md:mb-6">
+        <div className="text-center mb-2 md:mb-6">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-2">
             Inside the Engine
           </p>
@@ -423,7 +423,7 @@ export default function ProcessSlide({
         </div>
 
         {/* ─── Step progress bar ─── */}
-        <div className="flex items-center justify-center gap-0.5 md:gap-1 mb-4 md:mb-8">
+        <div className="flex items-center justify-center gap-0.5 md:gap-1 mb-2 md:mb-8">
           {steps.map((step, i) => {
             const isCompleted = i < activeStep;
             const isCurrent = i === activeStep;
@@ -452,7 +452,7 @@ export default function ProcessSlide({
                 </button>
                 {i < steps.length - 1 && (
                   <div
-                    className={`w-6 h-0.5 mx-0.5 rounded-full transition-colors ${
+                    className={`w-3 md:w-6 h-0.5 mx-0.5 rounded-full transition-colors ${
                       i < activeStep ? "bg-green-300" : "bg-gray-200"
                     }`}
                   />
@@ -500,7 +500,7 @@ export default function ProcessSlide({
             Previous
           </button>
 
-          <span className="text-xs md:text-xs md:text-sm text-brand-gray font-medium px-1 md:px-2">
+          <span className="text-xs md:text-sm text-brand-gray font-medium px-1 md:px-2">
             {activeStep + 1} / {steps.length}
           </span>
 

@@ -35,7 +35,7 @@ export default function SolutionSlide({
   return (
     <SlideWrapper isActive={isActive} variant="white">
       <div className="w-full max-w-5xl mx-auto">
-        <div className="text-center mb-4 md:mb-10">
+        <div className="text-center mb-3 md:mb-10">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
             The Solution
           </p>
@@ -47,17 +47,17 @@ export default function SolutionSlide({
           </p>
         </div>
 
-        <div className="grid md:grid-cols-5 gap-3 md:gap-8 items-center">
+        <div className="grid md:grid-cols-5 gap-2 md:gap-8 items-center">
           {/* Left: Capability cards — 3 of 5 cols */}
-          <div className="md:col-span-3 space-y-2 md:space-y-3">
+          <div className="md:col-span-3 space-y-1.5 md:space-y-3">
             {capabilities.map((cap, i) => (
               <div
                 key={i}
                 className="clean-card overflow-hidden"
               >
                 <div className="flex items-center gap-2 md:gap-3 px-3 py-2.5 md:px-5 md:py-4">
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
-                    <cap.icon size={16} className="text-brand-accent md:hidden" />
+                  <div className="w-7 h-7 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+                    <cap.icon size={14} className="text-brand-accent md:hidden" />
                     <cap.icon size={20} className="text-brand-accent hidden md:block" />
                   </div>
                   <div className="flex-1 min-w-0">

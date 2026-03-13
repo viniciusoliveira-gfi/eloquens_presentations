@@ -43,7 +43,7 @@ const levels = [
     level: 3,
     icon: BrainCircuit,
     title: "Autonomous Email Agents",
-    era: "Eloquens®",
+    era: "Eloquens\u00ae",
     desc: "Reads, understands, replies, takes action. End-to-end resolutions.",
     color: {
       bg: "bg-emerald-50",
@@ -73,7 +73,7 @@ export default function ThreeLevelsSlide({
     <SlideWrapper isActive={isActive} variant="soft">
       <div className="w-full max-w-4xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-4 md:mb-10">
+        <div className="text-center mb-3 md:mb-10">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
             AI is the Answer, but
           </p>
@@ -94,14 +94,14 @@ export default function ThreeLevelsSlide({
                 key={item.level}
                 onClick={() => handleClick(item.level)}
                 className={`
-                  relative rounded-xl md:rounded-2xl p-3 sm:p-5 md:p-6 lg:p-8 flex items-center gap-3 md:gap-6
+                  relative rounded-xl md:rounded-2xl p-3 sm:p-5 md:p-6 lg:p-8 flex items-center gap-2.5 sm:gap-4 md:gap-6
                   cursor-pointer select-none
                   transition-all duration-300 ease-out
                   ${
                     isSelected
                       ? `${item.color.bg} border-2 ${item.color.border} shadow-lg ${item.color.shadow} scale-[1.02]`
                       : isDimmed
-                      ? "bg-white border border-gray-200 opacity-60 hover:opacity-80 hover:border-gray-300 hover:shadow-sm"
+                      ? "bg-gray-50 border border-gray-200 opacity-40 scale-[0.98] hover:opacity-60 hover:border-gray-300 hover:shadow-sm"
                       : "bg-gray-50 border border-gray-200 hover:border-gray-300 hover:shadow-sm"
                   }
                 `}
@@ -109,7 +109,7 @@ export default function ThreeLevelsSlide({
                 {/* Icon badge */}
                 <div
                   className={`
-                    flex-shrink-0 w-9 h-9 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center
+                    flex-shrink-0 w-8 h-8 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center
                     transition-all duration-300
                     ${
                       isSelected
@@ -120,7 +120,7 @@ export default function ThreeLevelsSlide({
                     }
                   `}
                 >
-                  <item.icon size={16} className="md:hidden" />
+                  <item.icon size={14} className="md:hidden" />
                   <item.icon size={22} className="hidden md:block" />
                 </div>
 
@@ -159,7 +159,7 @@ export default function ThreeLevelsSlide({
                   </div>
                   <p
                     className={`
-                      text-[10px] md:text-sm leading-relaxed transition-colors duration-300
+                      text-[10px] md:text-sm leading-snug md:leading-relaxed transition-colors duration-300
                       ${
                         isSelected
                           ? "text-brand-slate"
@@ -197,7 +197,7 @@ export default function ThreeLevelsSlide({
 
         {/* Bottom hint */}
         <div className="text-center mt-3 md:mt-6">
-          <p className="text-xs md:text-sm text-gray-400 tracking-wide">
+          <p className="text-[10px] md:text-xs text-gray-400 tracking-wide">
             Click each level to explore
           </p>
         </div>
