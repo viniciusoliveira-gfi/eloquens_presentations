@@ -13,8 +13,8 @@ export default function HeroSlide({
 }) {
   return (
     <SlideWrapper isActive={isActive} variant="white">
-      {/* Floating envelopes background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      {/* Floating envelopes background — hidden on mobile */}
+      <div className="hidden md:block absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-[15%] left-[10%] animate-float-1">
           <Mail size={48} className="text-brand-accent" strokeWidth={1} />
         </div>
@@ -33,50 +33,51 @@ export default function HeroSlide({
       </div>
 
       <div className="relative flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
-        <div className="mb-8">
+        <div className="mb-4 md:mb-8">
           <Image
             src="/eloquens-logo.png"
             alt="Eloquens AI"
             width={180}
             height={48}
-            className="mx-auto"
+            className="mx-auto w-[120px] md:w-[180px] h-auto"
             priority
           />
         </div>
 
-        <h1 className="text-6xl md:text-7xl font-bold tracking-tight text-brand-dark mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-brand-dark mb-4 md:mb-6">
           Your Inbox.{" "}
           <span className="gradient-text">Handled.</span>
         </h1>
 
-        <p className="text-xl md:text-2xl text-brand-gray max-w-2xl leading-relaxed mb-10 whitespace-nowrap">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-brand-gray max-w-2xl leading-relaxed mb-6 md:mb-10">
           Stop wasting your best hours reading, sorting, and replying to email.
         </p>
 
         {/* Animated stats row */}
-        <div className="flex items-center gap-8 mb-12">
+        <div className="flex items-center gap-4 md:gap-8 mb-8 md:mb-12">
           <div className="flex flex-col items-center">
-            <span className="text-2xl font-bold gradient-text">&lt; 5 min</span>
-            <span className="text-xs text-brand-gray mt-1">Response Time</span>
+            <span className="text-lg md:text-2xl font-bold gradient-text">&lt; 5 min</span>
+            <span className="text-[10px] md:text-xs text-brand-gray mt-1">Response Time</span>
           </div>
-          <div className="w-px h-10 bg-gray-200" />
+          <div className="w-px h-8 md:h-10 bg-gray-200" />
           <div className="flex flex-col items-center">
-            <span className="text-2xl font-bold gradient-text">160+</span>
-            <span className="text-xs text-brand-gray mt-1">Languages</span>
+            <span className="text-lg md:text-2xl font-bold gradient-text">160+</span>
+            <span className="text-[10px] md:text-xs text-brand-gray mt-1">Languages</span>
           </div>
-          <div className="w-px h-10 bg-gray-200" />
+          <div className="w-px h-8 md:h-10 bg-gray-200" />
           <div className="flex flex-col items-center">
-            <span className="text-2xl font-bold gradient-text">24/7</span>
-            <span className="text-xs text-brand-gray mt-1">Always On</span>
+            <span className="text-lg md:text-2xl font-bold gradient-text">24/7</span>
+            <span className="text-[10px] md:text-xs text-brand-gray mt-1">Always On</span>
           </div>
         </div>
 
         <button
           onClick={onNext}
-          className="group flex items-center gap-2 px-8 py-4 bg-brand-accent text-white rounded-full font-semibold text-lg hover:bg-brand-deep transition-all animate-glow"
+          className="group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-brand-accent text-white rounded-full font-semibold text-base md:text-lg hover:bg-brand-deep transition-all animate-glow"
         >
           See How It Works
-          <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+          <ArrowRight size={18} className="md:hidden group-hover:translate-x-1 transition-transform" />
+          <ArrowRight size={20} className="hidden md:block group-hover:translate-x-1 transition-transform" />
         </button>
       </div>
     </SlideWrapper>

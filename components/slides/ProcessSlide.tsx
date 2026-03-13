@@ -249,11 +249,11 @@ function RoutingPanel() {
           </span>
         </div>
         {/* options */}
-        <div className="px-5 py-5 flex gap-3">
+        <div className="px-4 md:px-5 py-4 md:py-5 flex gap-2 md:gap-3">
           {options.map((opt, i) => (
             <button
               key={i}
-              className={`flex-1 flex flex-col items-center gap-2 p-4 rounded-xl border-2 transition-all ${
+              className={`flex-1 flex flex-col items-center gap-1.5 md:gap-2 p-3 md:p-4 rounded-xl border-2 transition-all ${
                 opt.selected
                   ? `${opt.bg} ${opt.border} shadow-md`
                   : "bg-white border-gray-100 opacity-60"
@@ -410,20 +410,20 @@ export default function ProcessSlide({
 
   return (
     <SlideWrapper isActive={isActive} variant="white">
-      <div className="w-full max-w-5xl mx-auto flex flex-col h-full justify-center py-10">
+      <div className="w-full max-w-5xl mx-auto flex flex-col h-full justify-center py-4 md:py-10">
         {/* Header */}
-        <div className="text-center mb-6">
-          <p className="text-sm font-semibold text-brand-accent uppercase tracking-wider mb-2">
+        <div className="text-center mb-4 md:mb-6">
+          <p className="text-xs md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-2">
             Inside the Engine
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-dark">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-dark">
             How Eloquens{" "}
             <span className="gradient-text">Thinks & Decides</span>
           </h2>
         </div>
 
         {/* ─── Step progress bar ─── */}
-        <div className="flex items-center justify-center gap-1 mb-8">
+        <div className="flex items-center justify-center gap-0.5 md:gap-1 mb-4 md:mb-8">
           {steps.map((step, i) => {
             const isCompleted = i < activeStep;
             const isCurrent = i === activeStep;
@@ -434,7 +434,7 @@ export default function ProcessSlide({
                     e.stopPropagation();
                     setActiveStep(i);
                   }}
-                  className={`flex items-center gap-1.5 px-3 py-2 rounded-full text-xs font-semibold transition-all ${
+                  className={`flex items-center gap-1 md:gap-1.5 px-2 py-1.5 md:px-3 md:py-2 rounded-full text-[10px] md:text-xs font-semibold transition-all ${
                     isCurrent
                       ? "bg-brand-accent text-white shadow-md shadow-blue-200"
                       : isCompleted
@@ -443,16 +443,22 @@ export default function ProcessSlide({
                   }`}
                 >
                   {isCompleted ? (
-                    <CheckCircle2 size={13} />
+                    <>
+                      <CheckCircle2 size={11} className="md:hidden" />
+                      <CheckCircle2 size={13} className="hidden md:block" />
+                    </>
                   ) : (
-                    <step.icon size={13} />
+                    <>
+                      <step.icon size={11} className="md:hidden" />
+                      <step.icon size={13} className="hidden md:block" />
+                    </>
                   )}
                   <span className="hidden sm:inline">{step.label}</span>
                   <span className="sm:hidden">{step.id}</span>
                 </button>
                 {i < steps.length - 1 && (
                   <div
-                    className={`w-6 h-0.5 mx-0.5 rounded-full transition-colors ${
+                    className={`w-3 md:w-6 h-0.5 mx-0.5 rounded-full transition-colors ${
                       i < activeStep ? "bg-green-300" : "bg-gray-200"
                     }`}
                   />
@@ -463,8 +469,8 @@ export default function ProcessSlide({
         </div>
 
         {/* ─── Step label ─── */}
-        <div className="text-center mb-4">
-          <span className="inline-flex items-center gap-2 text-brand-gray text-sm">
+        <div className="text-center mb-3 md:mb-4">
+          <span className="inline-flex items-center gap-2 text-brand-gray text-xs md:text-sm">
             <span className="number-badge !w-7 !h-7 !text-[11px]">
               {activeStep + 1}
             </span>
@@ -475,7 +481,7 @@ export default function ProcessSlide({
         </div>
 
         {/* ─── Active panel ─── */}
-        <div className="flex-1 flex items-center justify-center relative min-h-[340px]">
+        <div className="flex-1 flex items-center justify-center relative min-h-[280px] md:min-h-[340px]">
           <div
             key={activeStep}
             className="w-full animate-fadeSlide"
@@ -485,17 +491,18 @@ export default function ProcessSlide({
         </div>
 
         {/* ─── Navigation buttons ─── */}
-        <div className="flex items-center justify-center gap-3 mt-6">
+        <div className="flex items-center justify-center gap-2 md:gap-3 mt-4 md:mt-6">
           <button
             onClick={goPrev}
             disabled={activeStep === 0}
-            className={`flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-medium transition-all ${
+            className={`flex items-center gap-1 md:gap-1.5 px-3 py-2 md:px-4 md:py-2.5 rounded-full text-xs md:text-sm font-medium transition-all ${
               activeStep === 0
                 ? "opacity-30 cursor-not-allowed bg-gray-100 text-brand-gray"
                 : "bg-white text-brand-dark border border-gray-200 hover:border-brand-accent hover:text-brand-accent shadow-sm"
             }`}
           >
-            <ChevronLeft size={16} />
+            <ChevronLeft size={14} className="md:hidden" />
+            <ChevronLeft size={16} className="hidden md:block" />
             Previous
           </button>
 
@@ -506,14 +513,15 @@ export default function ProcessSlide({
           <button
             onClick={goNext}
             disabled={activeStep === steps.length - 1}
-            className={`flex items-center gap-1.5 px-4 py-2.5 rounded-full text-sm font-medium transition-all ${
+            className={`flex items-center gap-1 md:gap-1.5 px-3 py-2 md:px-4 md:py-2.5 rounded-full text-xs md:text-sm font-medium transition-all ${
               activeStep === steps.length - 1
                 ? "opacity-30 cursor-not-allowed bg-gray-100 text-brand-gray"
                 : "bg-brand-accent text-white hover:bg-brand-deep shadow-md shadow-blue-200"
             }`}
           >
             Next Step
-            <ChevronRight size={16} />
+            <ChevronRight size={14} className="md:hidden" />
+            <ChevronRight size={16} className="hidden md:block" />
           </button>
         </div>
       </div>

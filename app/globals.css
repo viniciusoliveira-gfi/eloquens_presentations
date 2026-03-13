@@ -130,31 +130,47 @@ html, body {
 
 /* Number badge */
 .number-badge {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: linear-gradient(135deg, #3B82F6, #1E40AF);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   color: white;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
+@media (min-width: 768px) {
+  .number-badge {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+
 /* Icon container */
 .icon-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   background: #EFF6FF;
   border: 1px solid #DBEAFE;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
 }
 
 /* Panel fade-slide animation for process walkthrough */

@@ -77,7 +77,7 @@ export default function ThreeLevelsSlide({
           <p className="text-sm font-semibold text-brand-accent uppercase tracking-wider mb-3">
             AI is the Answer, but
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-dark">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark">
             Draft-Only AI Is{" "}
             <span className="gradient-text">Not Enough.</span>
           </h2>
@@ -94,7 +94,7 @@ export default function ThreeLevelsSlide({
                 key={item.level}
                 onClick={() => handleClick(item.level)}
                 className={`
-                  relative rounded-2xl p-6 md:p-8 flex items-center gap-6
+                  relative rounded-2xl p-4 sm:p-6 md:p-8 flex items-center gap-3 sm:gap-4 md:gap-6
                   cursor-pointer select-none
                   transition-all duration-300 ease-out
                   ${
@@ -109,7 +109,7 @@ export default function ThreeLevelsSlide({
                 {/* Icon badge */}
                 <div
                   className={`
-                    flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center
+                    flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center
                     transition-all duration-300
                     ${
                       isSelected

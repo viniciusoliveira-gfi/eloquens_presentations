@@ -34,21 +34,21 @@ export default function HowItWorksSlide({
   return (
     <SlideWrapper isActive={isActive} variant="soft">
       <div className="w-full max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-brand-accent uppercase tracking-wider mb-3">
+        <div className="text-center mb-6 md:mb-12">
+          <p className="text-xs md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-2 md:mb-3">
             Getting Started
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-dark mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-3 md:mb-4">
             How It <span className="gradient-text">Works</span>
           </h2>
-          <p className="text-lg text-brand-gray">
+          <p className="text-sm md:text-lg text-brand-gray">
             Create your email assistant in minutes.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6">
           {steps.map((step, i) => (
-            <div key={i} className="clean-card p-6 text-center relative">
+            <div key={i} className="clean-card p-4 md:p-6 text-center relative">
               {/* Connector line */}
               {i < steps.length - 1 && (
                 <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-px bg-gray-300" />

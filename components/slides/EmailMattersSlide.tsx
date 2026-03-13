@@ -20,20 +20,20 @@ export default function EmailMattersSlide({
   return (
     <SlideWrapper isActive={isActive} variant="soft">
       <div className="w-full">
-        <div className="text-center mb-10">
-          <p className="text-sm font-semibold text-brand-accent uppercase tracking-wider mb-3">
+        <div className="text-center mb-6 md:mb-10">
+          <p className="text-xs md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-2 md:mb-3">
             The Paradox
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-dark">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark">
             When It Matters, It Happens Over{" "}
             <span className="gradient-text">Email</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-10">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 max-w-5xl mx-auto mb-6 md:mb-10">
           {/* Left — positive */}
-          <div className="clean-card p-8">
-            <div className="flex items-center gap-3 mb-6">
+          <div className="clean-card p-4 md:p-8">
+            <div className="flex items-center gap-3 mb-4 md:mb-6">
               <div className="w-3 h-3 rounded-full bg-brand-accent" />
               <h3 className="text-lg font-bold text-brand-dark">
                 The Most Important Business Channel
@@ -59,8 +59,8 @@ export default function EmailMattersSlide({
           </div>
 
           {/* Right — negative */}
-          <div className="clean-card p-8 border-red-100 hover:border-red-200">
-            <div className="flex items-center gap-3 mb-6">
+          <div className="clean-card p-4 md:p-8 border-red-100 hover:border-red-200">
+            <div className="flex items-center gap-3 mb-4 md:mb-6">
               <div className="w-3 h-3 rounded-full bg-red-400" />
               <h3 className="text-lg font-bold text-brand-dark">
                 But It&apos;s Crushing Your Team

@@ -22,7 +22,7 @@ export default function OldPlaybookSlide({
           <p className="text-sm font-semibold text-brand-accent uppercase tracking-wider mb-3">
             The Reality
           </p>
-          <h2 className="text-3xl md:text-[2.75rem] font-bold text-brand-dark leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-[2.75rem] font-bold text-brand-dark leading-tight">
             Every Business Must Do More with{" "}
             <span className="gradient-text">Less.</span>
           </h2>
@@ -40,7 +40,7 @@ export default function OldPlaybookSlide({
                 Customers Expect
               </p>
             </div>
-            <p className="text-3xl font-extrabold text-brand-dark mb-1">
+            <p className="text-2xl md:text-3xl font-extrabold text-brand-dark mb-1">
               &lt; 10 min
             </p>
             <p className="text-sm text-brand-gray leading-relaxed">
@@ -58,7 +58,7 @@ export default function OldPlaybookSlide({
                 Businesses Deliver
               </p>
             </div>
-            <p className="text-3xl font-extrabold text-brand-dark mb-1">
+            <p className="text-2xl md:text-3xl font-extrabold text-brand-dark mb-1">
               12+ hours
             </p>
             <p className="text-sm text-brand-gray leading-relaxed">
@@ -76,7 +76,7 @@ export default function OldPlaybookSlide({
                 The Result
               </p>
             </div>
-            <p className="text-3xl font-extrabold text-brand-dark mb-1">
+            <p className="text-2xl md:text-3xl font-extrabold text-brand-dark mb-1">
               58%
             </p>
             <p className="text-sm text-brand-gray leading-relaxed">
@@ -124,7 +124,7 @@ export default function OldPlaybookSlide({
         <div className="text-center pt-2">
           <div className="inline-block max-w-2xl">
             <div className="w-12 h-px bg-gradient-to-r from-transparent via-brand-accent to-transparent mx-auto mb-5 opacity-40" />
-            <p className="text-base md:text-lg text-brand-slate leading-relaxed whitespace-nowrap">
+            <p className="text-sm md:text-base lg:text-lg text-brand-slate leading-relaxed">
               The old playbook doesn&apos;t work.{" "}
               <span className="font-semibold gradient-text">
                 Businesses need something fundamentally different.
