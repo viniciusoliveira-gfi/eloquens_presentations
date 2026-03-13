@@ -63,15 +63,6 @@ html, body {
   }
 }
 
-/* Mobile: top-align content and allow scroll if content overflows */
-@media (max-width: 767px) {
-  .slide {
-    align-items: flex-start;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
 /* Alternate slide backgrounds */
 .slide-bg-white {
   background: #FFFFFF;

@@ -44,12 +44,12 @@ export default function HeroSlide({
             alt="Eloquens® AI"
             width={180}
             height={48}
-            className="mx-auto w-[90px] md:w-[180px] h-auto"
+            className="mx-auto w-[100px] md:w-[180px] h-auto"
             priority
           />
         </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-brand-dark mb-2 md:mb-6">
+        <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-brand-dark mb-2 md:mb-6">
           Your Inbox.{" "}
           <span className="gradient-text">Handled.</span>
         </h1>
@@ -59,19 +59,19 @@ export default function HeroSlide({
         </p>
 
         {/* Animated stats row */}
-        <div className="flex items-center gap-4 md:gap-8 mb-6 md:mb-12">
+        <div className="flex items-center gap-3 md:gap-8 mb-6 md:mb-12">
           <div className="flex flex-col items-center">
-            <span className="text-lg md:text-2xl font-bold gradient-text">&lt; 5 min</span>
+            <span className="text-base md:text-2xl font-bold gradient-text">&lt; 5 min</span>
             <span className="text-[10px] md:text-xs text-brand-gray mt-0.5">Response Time</span>
           </div>
           <div className="w-px h-7 md:h-10 bg-gray-200" />
           <div className="flex flex-col items-center">
-            <span className="text-lg md:text-2xl font-bold gradient-text">160+</span>
+            <span className="text-base md:text-2xl font-bold gradient-text">160+</span>
             <span className="text-[10px] md:text-xs text-brand-gray mt-0.5">Languages</span>
           </div>
           <div className="w-px h-7 md:h-10 bg-gray-200" />
           <div className="flex flex-col items-center">
-            <span className="text-lg md:text-2xl font-bold gradient-text">24/7</span>
+            <span className="text-base md:text-2xl font-bold gradient-text">24/7</span>
             <span className="text-[10px] md:text-xs text-brand-gray mt-0.5">Always On</span>
           </div>
         </div>

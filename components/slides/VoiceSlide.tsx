@@ -89,8 +89,7 @@ export default function VoiceSlide({
             >
               <p.icon size={12} className="md:hidden" />
               <p.icon size={16} className="hidden md:block" />
-              <span className="md:hidden">{p.label}</span>
-              <span className="hidden md:inline">{p.labelFull}</span>
+              {p.labelFull}
             </button>
           ))}
         </div>
@@ -114,9 +113,8 @@ export default function VoiceSlide({
             </span>
           </div>
           <div className="bg-gray-50 rounded-lg md:rounded-xl p-3 md:p-5 border border-gray-100">
-            <p className="text-xs md:text-sm text-brand-slate leading-snug md:leading-relaxed">
-              <span className="md:hidden">{current.exampleShort}</span>
-              <span className="hidden md:inline">{current.example}</span>
+            <p className="text-xs md:text-sm text-brand-slate leading-relaxed">
+              {current.example}
             </p>
           </div>
         </div>

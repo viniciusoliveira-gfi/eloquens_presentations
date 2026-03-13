@@ -410,7 +410,7 @@ export default function ProcessSlide({
 
   return (
     <SlideWrapper isActive={isActive} variant="white">
-      <div className="w-full max-w-5xl mx-auto flex flex-col md:h-full md:justify-center py-0 md:py-10">
+      <div className="w-full max-w-5xl mx-auto flex flex-col h-full justify-center py-4 md:py-10">
         {/* Header */}
         <div className="text-center mb-2 md:mb-6">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1">
@@ -475,7 +475,7 @@ export default function ProcessSlide({
         </div>
 
         {/* ─── Active panel ─── */}
-        <div className="flex-1 flex items-center justify-center relative min-h-0 md:min-h-[340px]">
+        <div className="flex-1 flex items-center justify-center relative min-h-[240px] md:min-h-[340px]">
           <div
             key={activeStep}
             className="w-full animate-fadeSlide"
