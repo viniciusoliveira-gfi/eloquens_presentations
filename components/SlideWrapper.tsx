@@ -31,7 +31,7 @@ export default function SlideWrapper({
     <div className={`slide bg-grid ${bgClass} ${className}`}>
       <div
         ref={ref}
-        className={`slide-content w-full max-w-6xl mx-auto px-6 md:px-12 ${
+        className={`slide-content w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-12 ${
           visible ? "visible" : ""
         }`}
       >

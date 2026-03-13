@@ -73,18 +73,18 @@ export default function ThreeLevelsSlide({
     <SlideWrapper isActive={isActive} variant="soft">
       <div className="w-full max-w-4xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-10">
-          <p className="text-sm font-semibold text-brand-accent uppercase tracking-wider mb-3">
+        <div className="text-center mb-4 md:mb-10">
+          <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
             AI is the Answer, but
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-dark">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark">
             Draft-Only AI Is{" "}
             <span className="gradient-text">Not Enough.</span>
           </h2>
         </div>
 
         {/* Three interactive tiers */}
-        <div className="space-y-4">
+        <div className="space-y-2 md:space-y-4">
           {levels.map((item) => {
             const isSelected = selected === item.level;
             const isDimmed = selected !== null && !isSelected;
@@ -94,7 +94,7 @@ export default function ThreeLevelsSlide({
                 key={item.level}
                 onClick={() => handleClick(item.level)}
                 className={`
-                  relative rounded-2xl p-6 md:p-8 flex items-center gap-6
+                  relative rounded-xl md:rounded-2xl p-3 sm:p-5 md:p-6 lg:p-8 flex items-center gap-3 md:gap-6
                   cursor-pointer select-none
                   transition-all duration-300 ease-out
                   ${
@@ -109,7 +109,7 @@ export default function ThreeLevelsSlide({
                 {/* Icon badge */}
                 <div
                   className={`
-                    flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center
+                    flex-shrink-0 w-9 h-9 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center
                     transition-all duration-300
                     ${
                       isSelected
@@ -120,15 +120,16 @@ export default function ThreeLevelsSlide({
                     }
                   `}
                 >
-                  <item.icon size={22} />
+                  <item.icon size={16} className="md:hidden" />
+                  <item.icon size={22} className="hidden md:block" />
                 </div>
 
                 {/* Content */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-3 mb-1">
+                  <div className="flex items-center gap-2 md:gap-3 mb-0.5 md:mb-1">
                     <h3
                       className={`
-                        text-lg md:text-xl font-bold transition-colors duration-300
+                        text-sm sm:text-base md:text-lg lg:text-xl font-bold transition-colors duration-300
                         ${
                           isSelected
                             ? "text-brand-dark"
@@ -142,7 +143,7 @@ export default function ThreeLevelsSlide({
                     </h3>
                     <span
                       className={`
-                        px-2.5 py-0.5 rounded-full text-sm font-semibold
+                        px-1.5 py-0.5 md:px-2.5 rounded-full text-[10px] md:text-sm font-semibold
                         transition-all duration-300
                         ${
                           isSelected
@@ -158,7 +159,7 @@ export default function ThreeLevelsSlide({
                   </div>
                   <p
                     className={`
-                      text-sm leading-relaxed transition-colors duration-300
+                      text-[10px] md:text-sm leading-relaxed transition-colors duration-300
                       ${
                         isSelected
                           ? "text-brand-slate"
@@ -195,8 +196,8 @@ export default function ThreeLevelsSlide({
         </div>
 
         {/* Bottom hint */}
-        <div className="text-center mt-6">
-          <p className="text-sm text-gray-400 tracking-wide">
+        <div className="text-center mt-3 md:mt-6">
+          <p className="text-xs md:text-sm text-gray-400 tracking-wide">
             Click each level to explore
           </p>
         </div>
