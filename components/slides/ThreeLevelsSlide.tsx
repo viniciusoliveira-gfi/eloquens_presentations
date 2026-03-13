@@ -63,7 +63,7 @@ export default function ThreeLevelsSlide({
 }: {
   isActive: boolean;
 }) {
-  const [selected, setSelected] = useState<number | null>(null);
+  const [selected, setSelected] = useState<number | null>(1);
 
   const handleClick = (level: number) => {
     setSelected(selected === level ? null : level);
@@ -101,7 +101,7 @@ export default function ThreeLevelsSlide({
                     isSelected
                       ? `${item.color.bg} border-2 ${item.color.border} shadow-lg ${item.color.shadow} scale-[1.02]`
                       : isDimmed
-                      ? "bg-gray-50 border border-gray-200 opacity-40 scale-[0.98]"
+                      ? "bg-white border border-gray-200 opacity-60 hover:opacity-80 hover:border-gray-300 hover:shadow-sm"
                       : "bg-gray-50 border border-gray-200 hover:border-gray-300 hover:shadow-sm"
                   }
                 `}
@@ -115,7 +115,7 @@ export default function ThreeLevelsSlide({
                       isSelected
                         ? `${item.color.iconBg} text-white shadow-md ${item.color.shadow}`
                         : isDimmed
-                        ? "bg-gray-200 text-gray-400"
+                        ? "bg-gray-300 text-gray-500"
                         : "bg-gray-200 text-brand-gray"
                     }
                   `}
@@ -133,7 +133,7 @@ export default function ThreeLevelsSlide({
                           isSelected
                             ? "text-brand-dark"
                             : isDimmed
-                            ? "text-gray-400"
+                            ? "text-gray-500"
                             : "text-brand-dark"
                         }
                       `}
@@ -148,7 +148,7 @@ export default function ThreeLevelsSlide({
                           isSelected
                             ? `${item.color.eraBg} text-white`
                             : isDimmed
-                            ? "bg-gray-200 text-gray-400"
+                            ? "bg-gray-200 text-gray-500"
                             : "bg-gray-200 text-brand-gray"
                         }
                       `}
@@ -163,7 +163,7 @@ export default function ThreeLevelsSlide({
                         isSelected
                           ? "text-brand-slate"
                           : isDimmed
-                          ? "text-gray-400"
+                          ? "text-gray-500"
                           : "text-brand-gray"
                       }
                     `}
@@ -181,7 +181,7 @@ export default function ThreeLevelsSlide({
                         isSelected
                           ? item.color.label
                           : isDimmed
-                          ? "text-gray-300"
+                          ? "text-gray-400"
                           : "text-gray-300"
                       }
                     `}
