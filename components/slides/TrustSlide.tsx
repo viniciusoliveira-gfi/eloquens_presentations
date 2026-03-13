@@ -42,20 +42,20 @@ export default function TrustSlide({
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6">
+        <div className="grid grid-cols-3 md:grid-cols-3 gap-1.5 md:gap-6">
           {pillars.map((pillar, i) => (
-            <div key={i} className="clean-card p-3 md:p-8 text-center">
-              <div className="icon-box !w-8 !h-8 md:!w-14 md:!h-14 !rounded-xl md:!rounded-2xl mx-auto mb-1.5 md:mb-5">
-                <pillar.icon size={16} className="text-brand-accent md:hidden" />
+            <div key={i} className="clean-card p-2.5 md:p-8 text-center">
+              <div className="icon-box !w-7 !h-7 md:!w-14 md:!h-14 !rounded-lg md:!rounded-2xl mx-auto mb-1 md:mb-5">
+                <pillar.icon size={14} className="text-brand-accent md:hidden" />
                 <pillar.icon size={24} className="text-brand-accent hidden md:block" />
               </div>
-              <h3 className="text-sm md:text-xl font-bold text-brand-dark mb-1 md:mb-3">
+              <h3 className="text-[11px] md:text-xl font-bold text-brand-dark mb-0.5 md:mb-3">
                 {pillar.title}
               </h3>
-              <p className="text-xs md:text-sm text-brand-gray leading-snug md:leading-relaxed mb-2 md:mb-4">
+              <p className="hidden md:block text-sm text-brand-gray leading-relaxed mb-4">
                 {pillar.desc}
               </p>
-              <span className="inline-block px-2 py-0.5 md:px-3 md:py-1 rounded-full bg-blue-50 text-[10px] md:text-xs font-semibold text-brand-accent">
+              <span className="inline-block px-1.5 py-0.5 md:px-3 md:py-1 rounded-full bg-blue-50 text-[9px] md:text-xs font-semibold text-brand-accent leading-tight">
                 {pillar.highlight}
               </span>
             </div>

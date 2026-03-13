@@ -7,35 +7,47 @@ import { Headphones, TrendingUp, Briefcase, Scale } from "lucide-react";
 const personas = [
   {
     id: "support",
-    label: "Customer Support",
+    label: "Support",
+    labelFull: "Customer Support",
     icon: Headphones,
     tone: "Warm, empathetic, solution-focused",
     example:
       "Hi Sarah, thank you for reaching out! I completely understand the frustration. I've already looked into your order (#4821) and issued a full refund. You should see it within 2-3 business days. Is there anything else I can help with?",
+    exampleShort:
+      "Hi Sarah, I've looked into your order (#4821) and issued a full refund. You should see it within 2-3 business days.",
   },
   {
     id: "sales",
     label: "Sales",
+    labelFull: "Sales",
     icon: TrendingUp,
     tone: "Confident, value-driven, action-oriented",
     example:
       "Hi Mark, great speaking with you yesterday. Based on your team's needs, I've put together a custom proposal. The Enterprise plan would give your 50-person team full coverage at $12/seat \u2014 a 40% saving vs. your current setup. Want to hop on a quick call this Thursday?",
+    exampleShort:
+      "Hi Mark, I've put together a custom proposal. The Enterprise plan gives your team full coverage at $12/seat \u2014 40% savings. Quick call Thursday?",
   },
   {
     id: "assistant",
-    label: "Personal Assistant",
+    label: "Assistant",
+    labelFull: "Personal Assistant",
     icon: Briefcase,
     tone: "Professional, concise, proactive",
     example:
       "Hi David, confirming your meeting with Acme Corp is set for Thursday at 2 PM EST. I've attached the prep materials and added the agenda to your calendar. Let me know if you'd like me to reschedule anything else this week.",
+    exampleShort:
+      "Hi David, your meeting with Acme Corp is confirmed for Thursday at 2 PM. Prep materials attached, agenda added to your calendar.",
   },
   {
     id: "legal",
     label: "Legal",
+    labelFull: "Legal",
     icon: Scale,
     tone: "Precise, formal, detail-oriented",
     example:
       "Dear Ms. Chen, please find attached the revised NDA reflecting the amendments discussed. Specifically, Section 4.2 has been updated to extend the confidentiality period to 36 months. Kindly review and confirm your acceptance at your earliest convenience.",
+    exampleShort:
+      "Dear Ms. Chen, attached is the revised NDA. Section 4.2 now extends the confidentiality period to 36 months. Please confirm your acceptance.",
   },
 ];
 
@@ -77,7 +89,8 @@ export default function VoiceSlide({
             >
               <p.icon size={12} className="md:hidden" />
               <p.icon size={16} className="hidden md:block" />
-              {p.label}
+              <span className="md:hidden">{p.label}</span>
+              <span className="hidden md:inline">{p.labelFull}</span>
             </button>
           ))}
         </div>
@@ -102,7 +115,8 @@ export default function VoiceSlide({
           </div>
           <div className="bg-gray-50 rounded-lg md:rounded-xl p-3 md:p-5 border border-gray-100">
             <p className="text-xs md:text-sm text-brand-slate leading-snug md:leading-relaxed">
-              {current.example}
+              <span className="md:hidden">{current.exampleShort}</span>
+              <span className="hidden md:inline">{current.example}</span>
             </p>
           </div>
         </div>

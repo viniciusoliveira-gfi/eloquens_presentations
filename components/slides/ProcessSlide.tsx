@@ -87,7 +87,7 @@ function SmartFiltersPanel() {
   return (
     <div className="w-full max-w-lg mx-auto px-1 md:px-0">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-        <div className="px-3 py-3 md:px-5 md:py-4 border-b border-gray-100 flex items-center justify-between">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 border-b border-gray-100 flex items-center justify-between">
           <span className="text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
             <Sparkles size={16} className="text-brand-accent" />
             Email Analysis
@@ -96,7 +96,7 @@ function SmartFiltersPanel() {
             Approved for Response
           </span>
         </div>
-        <div className="px-3 py-3 md:px-5 md:py-5 space-y-4">
+        <div className="px-3 py-2.5 md:px-5 md:py-5 space-y-4">
           {/* analysis rows */}
           {[
             {
@@ -153,7 +153,7 @@ function KnowledgeBasePanel() {
   return (
     <div className="w-full max-w-lg mx-auto px-1 md:px-0">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-        <div className="px-3 py-3 md:px-5 md:py-4 border-b border-gray-100 flex items-center justify-between">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 border-b border-gray-100 flex items-center justify-between">
           <span className="text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
             <Database size={16} className="text-brand-accent" />
             Knowledge Search
@@ -161,7 +161,7 @@ function KnowledgeBasePanel() {
           <Search size={16} className="text-brand-gray" />
         </div>
         {/* summary stats */}
-        <div className="px-3 py-3 md:px-5 md:py-4 flex gap-6 border-b border-gray-100">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 flex gap-6 border-b border-gray-100">
           <div className="text-center">
             <p className="text-xl md:text-2xl font-bold gradient-text">9</p>
             <p className="text-xs md:text-sm text-brand-gray uppercase tracking-wide">
@@ -176,7 +176,7 @@ function KnowledgeBasePanel() {
           </div>
         </div>
         {/* top matches */}
-        <div className="px-3 py-3 md:px-5 md:py-4 space-y-3">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 space-y-3">
           <p className="text-[10px] md:text-sm text-brand-gray uppercase tracking-wide font-medium mb-1">
             Top Matches
           </p>
@@ -242,14 +242,14 @@ function RoutingPanel() {
   return (
     <div className="w-full max-w-lg mx-auto px-1 md:px-0">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-        <div className="px-3 py-3 md:px-5 md:py-4 border-b border-gray-100">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 border-b border-gray-100">
           <span className="text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
             <GitBranch size={16} className="text-brand-accent" />
             Routing Decision
           </span>
         </div>
         {/* options */}
-        <div className="px-3 py-3 md:px-5 md:py-5 flex gap-3">
+        <div className="px-3 py-2.5 md:px-5 md:py-5 flex gap-3">
           {options.map((opt, i) => (
             <button
               key={i}
@@ -277,7 +277,7 @@ function RoutingPanel() {
           ))}
         </div>
         {/* details */}
-        <div className="px-3 py-3 md:px-5 md:py-4 border-t border-gray-100 space-y-3">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 border-t border-gray-100 space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-[10px] md:text-sm text-brand-gray uppercase tracking-wide font-medium">
               CC
@@ -410,10 +410,10 @@ export default function ProcessSlide({
 
   return (
     <SlideWrapper isActive={isActive} variant="white">
-      <div className="w-full max-w-5xl mx-auto flex flex-col h-full justify-center py-4 md:py-10">
+      <div className="w-full max-w-5xl mx-auto flex flex-col md:h-full md:justify-center py-0 md:py-10">
         {/* Header */}
         <div className="text-center mb-2 md:mb-6">
-          <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-2">
+          <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1">
             Inside the Engine
           </p>
           <h2 className="text-lg sm:text-3xl md:text-4xl font-bold text-brand-dark">
@@ -463,7 +463,7 @@ export default function ProcessSlide({
         </div>
 
         {/* ─── Step label ─── */}
-        <div className="text-center mb-2 md:mb-4">
+        <div className="text-center mb-1.5 md:mb-4">
           <span className="inline-flex items-center gap-1.5 md:gap-2 text-brand-gray text-[10px] md:text-sm">
             <span className="number-badge !w-5 !h-5 md:!w-7 md:!h-7 !text-[9px] md:!text-[11px]">
               {activeStep + 1}
@@ -475,7 +475,7 @@ export default function ProcessSlide({
         </div>
 
         {/* ─── Active panel ─── */}
-        <div className="flex-1 flex items-center justify-center relative min-h-[240px] md:min-h-[340px]">
+        <div className="flex-1 flex items-center justify-center relative min-h-0 md:min-h-[340px]">
           <div
             key={activeStep}
             className="w-full animate-fadeSlide"
@@ -485,7 +485,7 @@ export default function ProcessSlide({
         </div>
 
         {/* ─── Navigation buttons ─── */}
-        <div className="flex items-center justify-center gap-2 md:gap-3 mt-3 md:mt-6">
+        <div className="flex items-center justify-center gap-2 md:gap-3 mt-2 md:mt-6">
           <button
             onClick={goPrev}
             disabled={activeStep === 0}

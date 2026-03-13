@@ -95,7 +95,7 @@ export default function Presentation() {
   }, [next, prev]);
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-white">
+    <div className="w-screen overflow-hidden bg-white" style={{ height: '100dvh' }}>
       <ProgressBar current={current} total={TOTAL_SLIDES} />
       <Navigation
         current={current}

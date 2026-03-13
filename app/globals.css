@@ -34,19 +34,42 @@ html, body {
 /* Slide transitions */
 .slide-container {
   display: flex;
-  height: 100vh;
+  height: 100dvh;
+  height: 100vh; /* fallback for older browsers */
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   will-change: transform;
 }
 
+@supports (height: 100dvh) {
+  .slide-container {
+    height: 100dvh;
+  }
+}
+
 .slide {
   min-width: 100vw;
+  height: 100dvh;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+}
+
+@supports (height: 100dvh) {
+  .slide {
+    height: 100dvh;
+  }
+}
+
+/* Mobile: top-align content and allow scroll if content overflows */
+@media (max-width: 767px) {
+  .slide {
+    align-items: flex-start;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 /* Alternate slide backgrounds */
