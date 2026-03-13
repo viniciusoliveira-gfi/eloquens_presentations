@@ -50,26 +50,26 @@ export default function VoiceSlide({
   return (
     <SlideWrapper isActive={isActive} variant="white">
       <div className="w-full max-w-5xl mx-auto">
-        <div className="text-center mb-6 md:mb-10">
-          <p className="text-xs md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-2 md:mb-3">
+        <div className="text-center mb-3 md:mb-10">
+          <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
             Voice Matching
           </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-3 md:mb-4">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1.5 md:mb-4">
             It Sounds Like You.{" "}
             <span className="gradient-text">Because You Trained It.</span>
           </h2>
-          <p className="text-sm md:text-lg text-brand-gray">
+          <p className="text-xs md:text-lg text-brand-gray">
             Eloquens adapts to how you actually communicate.
           </p>
         </div>
 
         {/* Persona tabs — wrap on mobile */}
-        <div className="flex justify-center flex-wrap gap-2 mb-6 md:mb-8">
+        <div className="flex justify-center flex-wrap gap-1.5 md:gap-2 mb-3 md:mb-8">
           {personas.map((p, i) => (
             <button
               key={p.id}
               onClick={() => setActivePersona(i)}
-              className={`flex items-center gap-1.5 md:gap-2 px-3 py-2 md:px-4 md:py-2.5 rounded-full text-xs md:text-sm font-medium transition-all ${
+              className={`flex items-center gap-1 md:gap-2 px-2.5 py-1.5 md:px-4 md:py-2.5 rounded-full text-[10px] md:text-sm font-medium transition-all ${
                 i === activePersona
                   ? "bg-brand-accent text-white shadow-md shadow-blue-200"
                   : "bg-white text-brand-slate border border-gray-200 hover:border-blue-200 hover:text-brand-accent"
@@ -83,8 +83,8 @@ export default function VoiceSlide({
         </div>
 
         {/* Email example */}
-        <div className="clean-card p-4 md:p-8 max-w-3xl mx-auto">
-          <div className="flex items-center gap-2 mb-4">
+        <div className="clean-card p-3 md:p-8 max-w-3xl mx-auto">
+          <div className="flex items-center gap-2 mb-2 md:mb-4">
             <div className="w-2 h-2 rounded-full bg-red-400" />
             <div className="w-2 h-2 rounded-full bg-yellow-400" />
             <div className="w-2 h-2 rounded-full bg-green-400" />
@@ -92,22 +92,22 @@ export default function VoiceSlide({
               Eloquens — {current.label}
             </span>
           </div>
-          <div className="mb-4">
-            <span className="text-xs text-brand-gray uppercase tracking-wide">
+          <div className="mb-2 md:mb-4">
+            <span className="text-[10px] md:text-xs text-brand-gray uppercase tracking-wide">
               Tone:{" "}
             </span>
-            <span className="text-xs text-brand-accent font-medium">
+            <span className="text-[10px] md:text-xs text-brand-accent font-medium">
               {current.tone}
             </span>
           </div>
-          <div className="bg-gray-50 rounded-xl p-5 border border-gray-100">
-            <p className="text-sm text-brand-slate leading-relaxed">
+          <div className="bg-gray-50 rounded-xl p-3 md:p-5 border border-gray-100">
+            <p className="text-xs md:text-sm text-brand-slate leading-relaxed">
               {current.example}
             </p>
           </div>
         </div>
 
-        <p className="text-center text-sm text-brand-gray mt-8">
+        <p className="text-center text-xs md:text-sm text-brand-gray mt-3 md:mt-8">
           Not generic AI filler.{" "}
           <span className="font-semibold text-brand-dark">
             Your voice, your knowledge, your rules.

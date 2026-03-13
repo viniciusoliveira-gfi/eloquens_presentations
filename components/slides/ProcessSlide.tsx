@@ -35,10 +35,10 @@ const steps = [
 /* ──────────────────── Step 1 ──────────────────── */
 function EmailReceivedPanel() {
   return (
-    <div className="w-full max-w-lg mx-auto">
+    <div className="w-full max-w-lg mx-auto text-[13px] md:text-base">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
         {/* email header bar */}
-        <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100 bg-gray-50/60">
+        <div className="flex items-center justify-between px-3 py-2 md:px-5 md:py-3 border-b border-gray-100 bg-gray-50/60">
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-full bg-brand-accent/10 flex items-center justify-center text-xs font-bold text-brand-accent">
               BC
@@ -53,13 +53,13 @@ function EmailReceivedPanel() {
           </span>
         </div>
         {/* subject */}
-        <div className="px-5 py-3 border-b border-gray-50">
+        <div className="px-3 py-2 md:px-5 md:py-3 border-b border-gray-50">
           <p className="text-sm font-semibold text-brand-dark leading-snug">
             RE: Exinda — Renewal Status for 2024-2025 Support Contract
           </p>
         </div>
         {/* body */}
-        <div className="px-5 py-4 text-sm text-brand-slate leading-relaxed space-y-2">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 text-sm text-brand-slate leading-relaxed space-y-2">
           <p>Hi Team,</p>
           <p>
             Following up on our last conversation regarding the 2024-2025 renewal.
@@ -72,7 +72,7 @@ function EmailReceivedPanel() {
           <p className="text-brand-gray">Best regards,<br />Brett Coleman</p>
         </div>
         {/* bottom bar */}
-        <div className="px-5 py-3 border-t border-gray-100 bg-gray-50/40 flex items-center gap-3 text-xs text-brand-gray">
+        <div className="px-3 py-2 md:px-5 md:py-3 border-t border-gray-100 bg-gray-50/40 flex items-center gap-3 text-xs text-brand-gray">
           <Clock size={12} /> <span>Received 2 min ago</span>
           <span className="w-px h-3 bg-gray-200" />
           <Mail size={12} /> <span>brett@exinda.com</span>
@@ -85,9 +85,9 @@ function EmailReceivedPanel() {
 /* ──────────────────── Step 2 ──────────────────── */
 function SmartFiltersPanel() {
   return (
-    <div className="w-full max-w-lg mx-auto">
+    <div className="w-full max-w-lg mx-auto text-[13px] md:text-base">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-        <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 border-b border-gray-100 flex items-center justify-between">
           <span className="text-sm font-semibold text-brand-dark flex items-center gap-2">
             <Sparkles size={16} className="text-brand-accent" />
             Email Analysis
@@ -96,7 +96,7 @@ function SmartFiltersPanel() {
             Approved for Response
           </span>
         </div>
-        <div className="px-5 py-5 space-y-4">
+        <div className="px-3 py-3 md:px-5 md:py-5 space-y-4">
           {/* analysis rows */}
           {[
             {
@@ -132,7 +132,7 @@ function SmartFiltersPanel() {
             </div>
           ))}
         </div>
-        <div className="px-5 py-3 border-t border-gray-100 bg-gray-50/40">
+        <div className="px-3 py-2 md:px-5 md:py-3 border-t border-gray-100 bg-gray-50/40">
           <p className="text-xs text-brand-gray italic">
             &ldquo;Business email requiring a scheduling follow-up with pricing
             clarification.&rdquo;
@@ -151,9 +151,9 @@ function KnowledgeBasePanel() {
     { name: "Account History: Exinda", match: 84 },
   ];
   return (
-    <div className="w-full max-w-lg mx-auto">
+    <div className="w-full max-w-lg mx-auto text-[13px] md:text-base">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-        <div className="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 border-b border-gray-100 flex items-center justify-between">
           <span className="text-sm font-semibold text-brand-dark flex items-center gap-2">
             <Database size={16} className="text-brand-accent" />
             Knowledge Search
@@ -161,7 +161,7 @@ function KnowledgeBasePanel() {
           <Search size={16} className="text-brand-gray" />
         </div>
         {/* summary stats */}
-        <div className="px-5 py-4 flex gap-6 border-b border-gray-100">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 flex gap-6 border-b border-gray-100">
           <div className="text-center">
             <p className="text-2xl font-bold gradient-text">9</p>
             <p className="text-[10px] text-brand-gray uppercase tracking-wide">
@@ -176,7 +176,7 @@ function KnowledgeBasePanel() {
           </div>
         </div>
         {/* top matches */}
-        <div className="px-5 py-4 space-y-3">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 space-y-3">
           <p className="text-[10px] text-brand-gray uppercase tracking-wide font-medium mb-1">
             Top Matches
           </p>
@@ -240,16 +240,16 @@ function RoutingPanel() {
   ];
 
   return (
-    <div className="w-full max-w-lg mx-auto">
+    <div className="w-full max-w-lg mx-auto text-[13px] md:text-base">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-        <div className="px-5 py-4 border-b border-gray-100">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 border-b border-gray-100">
           <span className="text-sm font-semibold text-brand-dark flex items-center gap-2">
             <GitBranch size={16} className="text-brand-accent" />
             Routing Decision
           </span>
         </div>
         {/* options */}
-        <div className="px-4 md:px-5 py-4 md:py-5 flex gap-2 md:gap-3">
+        <div className="px-4 md:px-3 py-2.5 md:px-5 md:py-4 md:py-5 flex gap-2 md:gap-3">
           {options.map((opt, i) => (
             <button
               key={i}
@@ -277,7 +277,7 @@ function RoutingPanel() {
           ))}
         </div>
         {/* details */}
-        <div className="px-5 py-4 border-t border-gray-100 space-y-3">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 border-t border-gray-100 space-y-3">
           <div className="flex items-center justify-between">
             <span className="text-xs text-brand-gray uppercase tracking-wide font-medium">
               CC
@@ -307,9 +307,9 @@ function RoutingPanel() {
 /* ──────────────────── Step 5 ──────────────────── */
 function ResponsePanel() {
   return (
-    <div className="w-full max-w-lg mx-auto">
+    <div className="w-full max-w-lg mx-auto text-[13px] md:text-base">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
-        <div className="px-5 py-3 border-b border-gray-100 flex items-center justify-between bg-gray-50/40">
+        <div className="px-3 py-2 md:px-5 md:py-3 border-b border-gray-100 flex items-center justify-between bg-gray-50/40">
           <span className="text-sm font-semibold text-brand-dark flex items-center gap-2">
             <PenTool size={16} className="text-brand-accent" />
             Draft Reply
@@ -320,7 +320,7 @@ function ResponsePanel() {
           </span>
         </div>
         {/* meta */}
-        <div className="px-5 py-3 border-b border-gray-50 space-y-1.5 text-xs text-brand-gray">
+        <div className="px-3 py-2 md:px-5 md:py-3 border-b border-gray-50 space-y-1.5 text-xs text-brand-gray">
           <p>
             <span className="font-medium text-brand-slate">To:</span> Brett
             Coleman &lt;brett@exinda.com&gt;
@@ -331,7 +331,7 @@ function ResponsePanel() {
           </p>
         </div>
         {/* body */}
-        <div className="px-5 py-4 text-sm text-brand-slate leading-relaxed space-y-2">
+        <div className="px-3 py-2.5 md:px-5 md:py-4 text-sm text-brand-slate leading-relaxed space-y-2">
           <p>Hi Brett,</p>
           <p>
             Thank you for getting back to us — great to hear you&apos;d like to move
@@ -352,7 +352,7 @@ function ResponsePanel() {
           <p className="text-brand-gray">Best,<br />The Exinda Sales Team</p>
         </div>
         {/* footer */}
-        <div className="px-5 py-3 border-t border-gray-100 bg-gray-50/40 flex items-center justify-between">
+        <div className="px-3 py-2 md:px-5 md:py-3 border-t border-gray-100 bg-gray-50/40 flex items-center justify-between">
           <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 text-xs font-medium text-brand-accent">
             Tone: Professional · Warm
           </span>
@@ -412,18 +412,18 @@ export default function ProcessSlide({
     <SlideWrapper isActive={isActive} variant="white">
       <div className="w-full max-w-5xl mx-auto flex flex-col h-full justify-center py-4 md:py-10">
         {/* Header */}
-        <div className="text-center mb-4 md:mb-6">
-          <p className="text-xs md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-2">
+        <div className="text-center mb-2 md:mb-6">
+          <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1">
             Inside the Engine
           </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-brand-dark">
+          <h2 className="text-lg sm:text-3xl md:text-4xl font-bold text-brand-dark">
             How Eloquens{" "}
             <span className="gradient-text">Thinks & Decides</span>
           </h2>
         </div>
 
         {/* ─── Step progress bar ─── */}
-        <div className="flex items-center justify-center gap-0.5 md:gap-1 mb-4 md:mb-8">
+        <div className="flex items-center justify-center gap-0.5 md:gap-1 mb-2 md:mb-8">
           {steps.map((step, i) => {
             const isCompleted = i < activeStep;
             const isCurrent = i === activeStep;
@@ -469,9 +469,9 @@ export default function ProcessSlide({
         </div>
 
         {/* ─── Step label ─── */}
-        <div className="text-center mb-3 md:mb-4">
-          <span className="inline-flex items-center gap-2 text-brand-gray text-xs md:text-sm">
-            <span className="number-badge !w-7 !h-7 !text-[11px]">
+        <div className="text-center mb-1.5 md:mb-4">
+          <span className="inline-flex items-center gap-1.5 text-brand-gray text-[10px] md:text-sm">
+            <span className="number-badge !w-5 !h-5 md:!w-7 md:!h-7 !text-[9px] md:!text-[11px]">
               {activeStep + 1}
             </span>
             <span className="font-semibold text-brand-dark">
@@ -481,7 +481,7 @@ export default function ProcessSlide({
         </div>
 
         {/* ─── Active panel ─── */}
-        <div className="flex-1 flex items-center justify-center relative min-h-[280px] md:min-h-[340px]">
+        <div className="flex-1 flex items-center justify-center relative min-h-[240px] md:min-h-[340px]">
           <div
             key={activeStep}
             className="w-full animate-fadeSlide"
@@ -491,7 +491,7 @@ export default function ProcessSlide({
         </div>
 
         {/* ─── Navigation buttons ─── */}
-        <div className="flex items-center justify-center gap-2 md:gap-3 mt-4 md:mt-6">
+        <div className="flex items-center justify-center gap-2 md:gap-3 mt-2 md:mt-6">
           <button
             onClick={goPrev}
             disabled={activeStep === 0}

@@ -12,35 +12,35 @@ export default function CTASlide({
   return (
     <SlideWrapper isActive={isActive} variant="soft">
       <div className="flex flex-col items-center justify-center text-center max-w-3xl mx-auto">
-        <div className="mb-4 md:mb-8">
+        <div className="mb-3 md:mb-8">
           <Image
             src="/eloquens-logo.png"
             alt="Eloquens AI"
             width={140}
             height={36}
-            className="mx-auto opacity-60 w-[100px] md:w-[140px] h-auto"
+            className="mx-auto opacity-60 w-[80px] md:w-[140px] h-auto"
           />
         </div>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-4 md:mb-6">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-2 md:mb-6">
           Email, Finally{" "}
           <span className="gradient-text">Handled.</span>
         </h2>
 
-        <p className="text-base md:text-xl text-brand-gray mb-6 md:mb-10 max-w-xl">
+        <p className="text-sm md:text-xl text-brand-gray mb-4 md:mb-10 max-w-xl">
           Start your free trial today. No credit card required.
         </p>
 
-        <div className="flex flex-col md:flex-row items-center gap-3 md:gap-4 mb-8 md:mb-12">
+        <div className="flex flex-col md:flex-row items-center gap-2.5 md:gap-4 mb-5 md:mb-12">
           <a
             href="https://eloquens.ai"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-brand-accent text-white rounded-full font-semibold text-base md:text-lg hover:bg-brand-deep transition-all shadow-lg shadow-blue-200 hover:shadow-blue-300"
+            className="group flex items-center gap-2 px-5 py-2.5 md:px-8 md:py-4 bg-brand-accent text-white rounded-full font-semibold text-sm md:text-lg hover:bg-brand-deep transition-all shadow-lg shadow-blue-200 hover:shadow-blue-300"
           >
             Get Started Free
             <ArrowRight
-              size={18}
+              size={16}
               className="md:hidden group-hover:translate-x-1 transition-transform"
             />
             <ArrowRight
@@ -52,15 +52,15 @@ export default function CTASlide({
             href="https://eloquens.ai"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-white text-brand-dark rounded-full font-semibold text-base md:text-lg border border-gray-200 hover:border-brand-accent hover:text-brand-accent transition-all"
+            className="flex items-center gap-2 px-5 py-2.5 md:px-8 md:py-4 bg-white text-brand-dark rounded-full font-semibold text-sm md:text-lg border border-gray-200 hover:border-brand-accent hover:text-brand-accent transition-all"
           >
-            <Calendar size={18} className="md:hidden" />
+            <Calendar size={16} className="md:hidden" />
             <Calendar size={20} className="hidden md:block" />
             Book a Demo
           </a>
         </div>
 
-        <div className="text-sm text-brand-gray">
+        <div className="text-xs md:text-sm text-brand-gray">
           <span className="font-medium text-brand-dark">eloquens.ai</span>
           <span className="mx-2">·</span>
           Your Inbox. Handled.

@@ -73,18 +73,18 @@ export default function ThreeLevelsSlide({
     <SlideWrapper isActive={isActive} variant="soft">
       <div className="w-full max-w-4xl mx-auto">
         {/* Section header */}
-        <div className="text-center mb-10">
-          <p className="text-sm font-semibold text-brand-accent uppercase tracking-wider mb-3">
+        <div className="text-center mb-3 md:mb-10">
+          <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
             AI is the Answer, but
           </p>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark">
             Draft-Only AI Is{" "}
             <span className="gradient-text">Not Enough.</span>
           </h2>
         </div>
 
         {/* Three interactive tiers */}
-        <div className="space-y-4">
+        <div className="space-y-2 md:space-y-4">
           {levels.map((item) => {
             const isSelected = selected === item.level;
             const isDimmed = selected !== null && !isSelected;
@@ -94,7 +94,7 @@ export default function ThreeLevelsSlide({
                 key={item.level}
                 onClick={() => handleClick(item.level)}
                 className={`
-                  relative rounded-2xl p-4 sm:p-6 md:p-8 flex items-center gap-3 sm:gap-4 md:gap-6
+                  relative rounded-2xl p-3 sm:p-5 md:p-8 flex items-center gap-2.5 sm:gap-4 md:gap-6
                   cursor-pointer select-none
                   transition-all duration-300 ease-out
                   ${
@@ -109,7 +109,7 @@ export default function ThreeLevelsSlide({
                 {/* Icon badge */}
                 <div
                   className={`
-                    flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center
+                    flex-shrink-0 w-8 h-8 md:w-12 md:h-12 rounded-lg md:rounded-xl flex items-center justify-center
                     transition-all duration-300
                     ${
                       isSelected
@@ -120,7 +120,8 @@ export default function ThreeLevelsSlide({
                     }
                   `}
                 >
-                  <item.icon size={22} />
+                  <item.icon size={16} className="md:hidden" />
+                  <item.icon size={22} className="hidden md:block" />
                 </div>
 
                 {/* Content */}
@@ -128,7 +129,7 @@ export default function ThreeLevelsSlide({
                   <div className="flex items-center gap-3 mb-1">
                     <h3
                       className={`
-                        text-lg md:text-xl font-bold transition-colors duration-300
+                        text-sm md:text-xl font-bold transition-colors duration-300
                         ${
                           isSelected
                             ? "text-brand-dark"
@@ -195,8 +196,8 @@ export default function ThreeLevelsSlide({
         </div>
 
         {/* Bottom hint */}
-        <div className="text-center mt-6">
-          <p className="text-xs text-gray-400 tracking-wide">
+        <div className="text-center mt-3 md:mt-6">
+          <p className="text-[10px] md:text-xs text-gray-400 tracking-wide">
             Click each level to explore
           </p>
         </div>
