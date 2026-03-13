@@ -54,11 +54,11 @@ export default function VoiceSlide({
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
             Voice Matching
           </p>
-          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-2 md:mb-4">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1.5 md:mb-4">
             It Sounds Like You.{" "}
             <span className="gradient-text">Because You Trained It.</span>
           </h2>
-          <p className="text-sm md:text-lg text-brand-gray">
+          <p className="text-xs md:text-lg text-brand-gray">
             Eloquens® AI adapts to how you actually communicate.
           </p>
         </div>

@@ -36,7 +36,7 @@ export default function TrustSlide({
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
             Eloquens® AI is Built for
           </p>
-          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-2 md:mb-4">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1.5 md:mb-4">
             End-to-End{" "}
             <span className="gradient-text">Resolution.</span>
           </h2>
@@ -45,7 +45,7 @@ export default function TrustSlide({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6">
           {pillars.map((pillar, i) => (
             <div key={i} className="clean-card p-3 md:p-8 text-center">
-              <div className="icon-box !w-8 !h-8 md:!w-14 md:!h-14 !rounded-xl md:!rounded-2xl mx-auto mb-2 md:mb-5">
+              <div className="icon-box !w-8 !h-8 md:!w-14 md:!h-14 !rounded-xl md:!rounded-2xl mx-auto mb-1.5 md:mb-5">
                 <pillar.icon size={16} className="text-brand-accent md:hidden" />
                 <pillar.icon size={24} className="text-brand-accent hidden md:block" />
               </div>

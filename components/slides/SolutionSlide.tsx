@@ -39,7 +39,7 @@ export default function SolutionSlide({
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
             The Solution
           </p>
-          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-2 md:mb-4">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1.5 md:mb-4">
             Meet <span className="gradient-text">Eloquens® AI</span>
           </h2>
           <p className="text-sm md:text-lg text-brand-gray max-w-xl mx-auto">
@@ -55,7 +55,7 @@ export default function SolutionSlide({
                 key={i}
                 className="clean-card overflow-hidden"
               >
-                <div className="flex items-center gap-2 md:gap-3 px-3 py-2.5 md:px-5 md:py-4">
+                <div className="flex items-center gap-2 md:gap-3 px-3 py-2 md:px-5 md:py-4">
                   <div className="w-7 h-7 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
                     <cap.icon size={14} className="text-brand-accent md:hidden" />
                     <cap.icon size={20} className="text-brand-accent hidden md:block" />

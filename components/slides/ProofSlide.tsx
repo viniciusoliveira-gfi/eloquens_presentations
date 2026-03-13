@@ -76,7 +76,7 @@ export default function ProofSlide({
               <div className="text-2xl md:text-4xl font-bold gradient-text mb-1 md:mb-2">
                 {m.value}
               </div>
-              <h3 className="font-bold text-brand-dark text-sm md:text-lg mb-1">
+              <h3 className="font-bold text-brand-dark text-sm md:text-lg mb-0.5 md:mb-1">
                 {m.label}
               </h3>
               <p className="text-[10px] md:text-sm text-brand-gray">{m.desc}</p>
@@ -91,7 +91,7 @@ export default function ProofSlide({
             <Quote size={24} className="text-brand-accent opacity-40 hidden md:block" />
           </div>
           <div>
-            <p className="text-brand-slate text-xs md:text-base leading-snug md:leading-relaxed italic mb-2 md:mb-3">
+            <p className="text-brand-slate text-xs md:text-base leading-snug md:leading-relaxed italic mb-1.5 md:mb-3">
               &ldquo;Eloquens® AI feels like hiring a full-time assistant without the
               overhead. Our response times dropped from hours to minutes.&rdquo;
             </p>

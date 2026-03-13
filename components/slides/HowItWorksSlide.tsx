@@ -38,7 +38,7 @@ export default function HowItWorksSlide({
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
             Getting Started
           </p>
-          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-2 md:mb-4">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1 md:mb-4">
             How It <span className="gradient-text">Works</span>
           </h2>
           <p className="text-xs md:text-lg text-brand-gray">
