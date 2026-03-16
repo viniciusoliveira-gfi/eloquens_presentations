@@ -43,7 +43,7 @@ const levels = [
     level: 3,
     icon: BrainCircuit,
     title: "Autonomous Email Agents",
-    era: "Eloquens",
+    era: "Eloquens® AI",
     desc: "Reads, understands, replies, takes action. End-to-end resolutions.",
     color: {
       bg: "bg-emerald-50",

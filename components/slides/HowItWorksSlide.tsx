@@ -12,7 +12,7 @@ const steps = [
   {
     icon: Settings,
     title: "Set Rules & Tone",
-    desc: "Define how Eloquens should respond, escalate, or close emails.",
+    desc: "Define how Eloquens® AI should respond, escalate, or close emails.",
   },
   {
     icon: Database,
@@ -21,7 +21,7 @@ const steps = [
   },
   {
     icon: Rocket,
-    title: "Let Eloquens Run",
+    title: "Let Eloquens® AI Run",
     desc: "Approve replies or enable auto-send. Start saving hours immediately.",
   },
 ];

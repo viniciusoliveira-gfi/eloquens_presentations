@@ -92,7 +92,7 @@ export default function ProofSlide({
           </div>
           <div>
             <p className="text-brand-slate text-xs md:text-base leading-relaxed italic mb-1.5 md:mb-3">
-              &ldquo;Eloquens feels like hiring a full-time assistant without the
+              &ldquo;Eloquens® AI feels like hiring a full-time assistant without the
               overhead. Our response times dropped from hours to minutes.&rdquo;
             </p>
             <p className="text-[10px] md:text-sm text-brand-gray font-medium">

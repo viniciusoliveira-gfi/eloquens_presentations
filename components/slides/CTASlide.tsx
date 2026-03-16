@@ -15,7 +15,7 @@ export default function CTASlide({
         <div className="mb-3 md:mb-8">
           <Image
             src="/eloquens-logo.png"
-            alt="Eloquens AI"
+            alt="Eloquens® AI"
             width={140}
             height={36}
             className="mx-auto opacity-60 w-[80px] md:w-[140px] h-auto"

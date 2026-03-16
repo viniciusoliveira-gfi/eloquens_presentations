@@ -19,7 +19,7 @@ const pillars = [
   {
     icon: UserCheck,
     title: "Human-in-the-Loop",
-    desc: "When Eloquens hits a knowledge gap, it escalates to a human. Then it learns from the answer. A self-learning engine that gets smarter with every interaction.",
+    desc: "When Eloquens® AI hits a knowledge gap, it escalates to a human. Then it learns from the answer. A self-learning engine that gets smarter with every interaction.",
     highlight: "Self-learning, always improving",
   },
 ];
@@ -34,7 +34,7 @@ export default function TrustSlide({
       <div className="w-full max-w-5xl mx-auto">
         <div className="text-center mb-3 md:mb-12">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
-            Eloquens is Built for
+            Eloquens® AI is Built for
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1.5 md:mb-4">
             End-to-End{" "}
@@ -66,7 +66,7 @@ export default function TrustSlide({
           <div className="inline-block max-w-2xl">
             <div className="w-12 h-px bg-gradient-to-r from-transparent via-brand-accent to-transparent mx-auto mb-2 md:mb-5 opacity-40" />
             <p className="text-xs md:text-lg font-semibold text-brand-dark tracking-tight">
-              Eloquens AI doesn&apos;t just draft&thinsp;—&thinsp;
+              Eloquens® AI doesn&apos;t just draft&thinsp;—&thinsp;
               <span className="gradient-text">it sends.</span>
             </p>
             <p className="text-[10px] md:text-sm text-brand-gray mt-1 md:mt-2 leading-snug md:leading-relaxed">

@@ -36,7 +36,7 @@ export default function HeroSlide({
         <div className="mb-2 md:mb-8">
           <Image
             src="/eloquens-logo.png"
-            alt="Eloquens AI"
+            alt="Eloquens® AI"
             width={180}
             height={48}
             className="mx-auto w-[100px] md:w-[180px] h-auto"

@@ -59,7 +59,7 @@ export default function VoiceSlide({
             <span className="gradient-text">Because You Trained It.</span>
           </h2>
           <p className="text-xs md:text-lg text-brand-gray">
-            Eloquens adapts to how you actually communicate.
+            Eloquens® AI adapts to how you actually communicate.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export default function VoiceSlide({
             <div className="w-2 h-2 rounded-full bg-yellow-400" />
             <div className="w-2 h-2 rounded-full bg-green-400" />
             <span className="ml-3 text-xs text-brand-gray font-mono">
-              Eloquens — {current.label}
+              Eloquens® AI — {current.label}
             </span>
           </div>
           <div className="mb-2 md:mb-4">

@@ -40,7 +40,7 @@ export default function SolutionSlide({
             The Solution
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1.5 md:mb-4">
-            Meet <span className="gradient-text">Eloquens</span>
+            Meet <span className="gradient-text">Eloquens® AI</span>
           </h2>
           <p className="text-sm md:text-lg text-brand-gray max-w-xl mx-auto">
             The best email assistant in the world
@@ -78,7 +78,7 @@ export default function SolutionSlide({
             <div className="rounded-2xl border border-gray-200 shadow-xl overflow-hidden bg-white">
               <Image
                 src="/meet-eloquens.png"
-                alt="Eloquens AI Product"
+                alt="Eloquens® AI Product"
                 width={520}
                 height={380}
                 className="w-full h-auto"
