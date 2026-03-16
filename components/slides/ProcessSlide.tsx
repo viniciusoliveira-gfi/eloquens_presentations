@@ -418,7 +418,7 @@ export default function ProcessSlide({
           </p>
           <h2 className="text-lg sm:text-3xl md:text-4xl font-bold text-brand-dark">
             How Eloquens® AI{" "}
-            <span className="gradient-text">Thinks & Decides</span>
+            <span className="gradient-text">thinks & decides</span>
           </h2>
         </div>
 

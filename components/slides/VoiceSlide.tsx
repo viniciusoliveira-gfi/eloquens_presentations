@@ -55,8 +55,8 @@ export default function VoiceSlide({
             Voice Matching
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1.5 md:mb-4">
-            It Sounds Like You.{" "}
-            <span className="gradient-text">Because You Trained It.</span>
+            It sounds like you.{" "}
+            <span className="gradient-text">Because you trained it.</span>
           </h2>
           <p className="text-xs md:text-lg text-brand-gray">
             Eloquens® AI adapts to how you actually communicate.

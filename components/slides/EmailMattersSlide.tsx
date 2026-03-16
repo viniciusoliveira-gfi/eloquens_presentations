@@ -25,8 +25,8 @@ export default function EmailMattersSlide({
             The Paradox
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark">
-            When It Matters, It Happens Over{" "}
-            <span className="gradient-text">Email</span>
+            When it matters, it happens over{" "}
+            <span className="gradient-text">email</span>
           </h2>
         </div>
 
@@ -36,7 +36,7 @@ export default function EmailMattersSlide({
             <div className="flex items-center gap-2 mb-2 md:mb-6">
               <div className="w-2.5 h-2.5 rounded-full bg-brand-accent" />
               <h3 className="text-sm md:text-lg font-bold text-brand-dark">
-                The Most Important Business Channel
+                The most important business channel
               </h3>
             </div>
             <div className="space-y-2 md:space-y-4">
@@ -64,7 +64,7 @@ export default function EmailMattersSlide({
             <div className="flex items-center gap-2 mb-2 md:mb-6">
               <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
               <h3 className="text-sm md:text-lg font-bold text-brand-dark">
-                But It&apos;s Crushing Your Team
+                But it&apos;s crushing your team
               </h3>
             </div>
             <div className="space-y-2 md:space-y-4">

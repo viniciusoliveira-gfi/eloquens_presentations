@@ -23,8 +23,8 @@ export default function CTASlide({
         </div>
 
         <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-brand-dark mb-2 md:mb-6">
-          Email, Finally{" "}
-          <span className="gradient-text">Handled.</span>
+          Email, finally{" "}
+          <span className="gradient-text">handled.</span>
         </h2>
 
         <p className="text-sm md:text-xl text-brand-gray mb-4 md:mb-10 max-w-xl">

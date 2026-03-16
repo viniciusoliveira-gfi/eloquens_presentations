@@ -23,8 +23,8 @@ export default function OldPlaybookSlide({
             The Reality
           </p>
           <h2 className="text-xl sm:text-3xl md:text-[2.75rem] font-bold text-brand-dark leading-tight">
-            Every Business Must Do More with{" "}
-            <span className="gradient-text">Less.</span>
+            Every business must do more with{" "}
+            <span className="gradient-text">less.</span>
           </h2>
         </div>
 

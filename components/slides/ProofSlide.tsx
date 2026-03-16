@@ -44,8 +44,8 @@ export default function ProofSlide({
             Trust & Results
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark">
-            Trusted by Teams.{" "}
-            <span className="gradient-text">Secured by Design.</span>
+            Trusted by teams.{" "}
+            <span className="gradient-text">Secured by design.</span>
           </h2>
         </div>
 

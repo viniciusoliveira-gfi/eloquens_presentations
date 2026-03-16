@@ -45,7 +45,7 @@ export default function HeroSlide({
         </div>
 
         <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-brand-dark mb-2 md:mb-6">
-          Your Inbox.{" "}
+          Your inbox.{" "}
           <span className="gradient-text">Handled.</span>
         </h1>
 

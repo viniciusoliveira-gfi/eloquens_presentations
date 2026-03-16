@@ -37,8 +37,8 @@ export default function TrustSlide({
             Eloquens® AI is Built for
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1.5 md:mb-4">
-            End-to-End{" "}
-            <span className="gradient-text">Resolution.</span>
+            End-to-end{" "}
+            <span className="gradient-text">resolution.</span>
           </h2>
         </div>
 

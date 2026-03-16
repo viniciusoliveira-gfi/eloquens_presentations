@@ -78,8 +78,8 @@ export default function ThreeLevelsSlide({
             AI is the Answer, but
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark">
-            Draft-Only AI Is{" "}
-            <span className="gradient-text">Not Enough.</span>
+            Draft-only AI is{" "}
+            <span className="gradient-text">not enough.</span>
           </h2>
         </div>
 

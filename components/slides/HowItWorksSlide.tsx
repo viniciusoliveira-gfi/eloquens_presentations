@@ -39,7 +39,7 @@ export default function HowItWorksSlide({
             Getting Started
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1 md:mb-4">
-            How It <span className="gradient-text">Works</span>
+            How it <span className="gradient-text">works</span>
           </h2>
           <p className="text-xs md:text-lg text-brand-gray">
             Create your email assistant in minutes.
