@@ -3,6 +3,7 @@
 import SlideWrapper from "../SlideWrapper";
 import Image from "next/image";
 import { ArrowRight, Mail } from "lucide-react";
+import { useTr } from "../../lib/LanguageContext";
 
 export default function HeroSlide({
   isActive,
@@ -11,6 +12,8 @@ export default function HeroSlide({
   isActive: boolean;
   onNext: () => void;
 }) {
+  const { tr, t } = useTr();
+
   return (
     <SlideWrapper isActive={isActive} variant="white">
       {/* Floating envelopes background — hidden on mobile */}
@@ -50,29 +53,29 @@ export default function HeroSlide({
         </div>
 
         <h1 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-brand-dark mb-2 md:mb-6">
-          Your Inbox.{" "}
-          <span className="gradient-text">Handled.</span>
+          {tr(t.hero.inbox)}{" "}
+          <span className="gradient-text">{tr(t.hero.handled)}</span>
         </h1>
 
         <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-brand-gray max-w-2xl leading-relaxed mb-6 md:mb-10">
-          Stop wasting your best hours reading, sorting, and replying to email.
+          {tr(t.hero.subtitle)}
         </p>
 
         {/* Animated stats row */}
         <div className="flex items-center gap-3 md:gap-8 mb-6 md:mb-12">
           <div className="flex flex-col items-center">
             <span className="text-base md:text-2xl font-bold gradient-text">&lt; 5 min</span>
-            <span className="text-[10px] md:text-xs text-brand-gray mt-0.5">Response Time</span>
+            <span className="text-[10px] md:text-xs text-brand-gray mt-0.5">{tr(t.hero.responseTime)}</span>
           </div>
           <div className="w-px h-7 md:h-10 bg-gray-200" />
           <div className="flex flex-col items-center">
             <span className="text-base md:text-2xl font-bold gradient-text">160+</span>
-            <span className="text-[10px] md:text-xs text-brand-gray mt-0.5">Languages</span>
+            <span className="text-[10px] md:text-xs text-brand-gray mt-0.5">{tr(t.hero.languages)}</span>
           </div>
           <div className="w-px h-7 md:h-10 bg-gray-200" />
           <div className="flex flex-col items-center">
             <span className="text-base md:text-2xl font-bold gradient-text">24/7</span>
-            <span className="text-[10px] md:text-xs text-brand-gray mt-0.5">Always On</span>
+            <span className="text-[10px] md:text-xs text-brand-gray mt-0.5">{tr(t.hero.alwaysOn)}</span>
           </div>
         </div>
 
@@ -80,7 +83,7 @@ export default function HeroSlide({
           onClick={onNext}
           className="group flex items-center gap-2 px-6 py-3 md:px-8 md:py-4 bg-brand-accent text-white rounded-full font-semibold text-sm md:text-lg hover:bg-brand-deep transition-all animate-glow"
         >
-          See How It Works
+          {tr(t.hero.cta)}
           <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform md:hidden" />
           <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform hidden md:block" />
         </button>

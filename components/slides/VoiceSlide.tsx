@@ -3,53 +3,7 @@
 import { useState } from "react";
 import SlideWrapper from "../SlideWrapper";
 import { Headphones, TrendingUp, Briefcase, Scale } from "lucide-react";
-
-const personas = [
-  {
-    id: "support",
-    label: "Support",
-    labelFull: "Customer Support",
-    icon: Headphones,
-    tone: "Warm, empathetic, solution-focused",
-    example:
-      "Hi Sarah, thank you for reaching out! I completely understand the frustration. I've already looked into your order (#4821) and issued a full refund. You should see it within 2-3 business days. Is there anything else I can help with?",
-    exampleShort:
-      "Hi Sarah, I've looked into your order (#4821) and issued a full refund. You should see it within 2-3 business days.",
-  },
-  {
-    id: "sales",
-    label: "Sales",
-    labelFull: "Sales",
-    icon: TrendingUp,
-    tone: "Confident, value-driven, action-oriented",
-    example:
-      "Hi Mark, great speaking with you yesterday. Based on your team's needs, I've put together a custom proposal. The Enterprise plan would give your 50-person team full coverage at $12/seat \u2014 a 40% saving vs. your current setup. Want to hop on a quick call this Thursday?",
-    exampleShort:
-      "Hi Mark, I've put together a custom proposal. The Enterprise plan gives your team full coverage at $12/seat \u2014 40% savings. Quick call Thursday?",
-  },
-  {
-    id: "assistant",
-    label: "Assistant",
-    labelFull: "Personal Assistant",
-    icon: Briefcase,
-    tone: "Professional, concise, proactive",
-    example:
-      "Hi David, confirming your meeting with Acme Corp is set for Thursday at 2 PM EST. I've attached the prep materials and added the agenda to your calendar. Let me know if you'd like me to reschedule anything else this week.",
-    exampleShort:
-      "Hi David, your meeting with Acme Corp is confirmed for Thursday at 2 PM. Prep materials attached, agenda added to your calendar.",
-  },
-  {
-    id: "legal",
-    label: "Legal",
-    labelFull: "Legal",
-    icon: Scale,
-    tone: "Precise, formal, detail-oriented",
-    example:
-      "Dear Ms. Chen, please find attached the revised NDA reflecting the amendments discussed. Specifically, Section 4.2 has been updated to extend the confidentiality period to 36 months. Kindly review and confirm your acceptance at your earliest convenience.",
-    exampleShort:
-      "Dear Ms. Chen, attached is the revised NDA. Section 4.2 now extends the confidentiality period to 36 months. Please confirm your acceptance.",
-  },
-];
+import { useTr } from "../../lib/LanguageContext";
 
 export default function VoiceSlide({
   isActive,
@@ -57,6 +11,43 @@ export default function VoiceSlide({
   isActive: boolean;
 }) {
   const [activePersona, setActivePersona] = useState(0);
+  const { tr, t } = useTr();
+
+  const personas = [
+    {
+      id: "support",
+      label: "Support",
+      labelFull: tr(t.voice.supportLabel),
+      icon: Headphones,
+      tone: tr(t.voice.supportTone),
+      example: tr(t.voice.supportExample),
+    },
+    {
+      id: "sales",
+      label: tr(t.voice.salesLabel),
+      labelFull: tr(t.voice.salesLabel),
+      icon: TrendingUp,
+      tone: tr(t.voice.salesTone),
+      example: tr(t.voice.salesExample),
+    },
+    {
+      id: "assistant",
+      label: "Assistant",
+      labelFull: tr(t.voice.assistantLabel),
+      icon: Briefcase,
+      tone: tr(t.voice.assistantTone),
+      example: tr(t.voice.assistantExample),
+    },
+    {
+      id: "legal",
+      label: tr(t.voice.legalLabel),
+      labelFull: tr(t.voice.legalLabel),
+      icon: Scale,
+      tone: tr(t.voice.legalTone),
+      example: tr(t.voice.legalExample),
+    },
+  ];
+
   const current = personas[activePersona];
 
   return (
@@ -64,14 +55,14 @@ export default function VoiceSlide({
       <div className="w-full max-w-5xl mx-auto">
         <div className="text-center mb-3 md:mb-10">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
-            Voice Matching
+            {tr(t.voice.tag)}
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1.5 md:mb-4">
-            It Sounds Like You.{" "}
-            <span className="gradient-text">Because You Trained It.</span>
+            {tr(t.voice.titleStart)}{" "}
+            <span className="gradient-text">{tr(t.voice.titleHighlight)}</span>
           </h2>
           <p className="text-xs md:text-lg text-brand-gray">
-            Eloquens® AI adapts to how you actually communicate.
+            {tr(t.voice.subtitle)}
           </p>
         </div>
 
@@ -106,7 +97,7 @@ export default function VoiceSlide({
           </div>
           <div className="mb-2 md:mb-4">
             <span className="text-[10px] md:text-xs text-brand-gray uppercase tracking-wide">
-              Tone:{" "}
+              {tr(t.voice.tone)}:{" "}
             </span>
             <span className="text-[10px] md:text-xs text-brand-accent font-medium">
               {current.tone}
@@ -120,9 +111,9 @@ export default function VoiceSlide({
         </div>
 
         <p className="text-center text-[10px] md:text-sm text-brand-gray mt-3 md:mt-8">
-          Not generic AI filler.{" "}
+          {tr(t.voice.bottomStart)}{" "}
           <span className="font-semibold text-brand-dark">
-            Your voice, your knowledge, your rules.
+            {tr(t.voice.bottomBold)}
           </span>
         </p>
       </div>

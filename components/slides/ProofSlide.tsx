@@ -9,43 +9,46 @@ import {
   Clock,
   Quote,
 } from "lucide-react";
-
-const securityBadges = [
-  { icon: ShieldCheck, label: "CASA Verified" },
-  { icon: Server, label: "EU & US Data Residency" },
-  { icon: Scale, label: "GDPR · CCPA · HIPAA" },
-];
-
-const metrics = [
-  {
-    value: "99%",
-    label: "Faster Response",
-    desc: "From hours to under 5 minutes",
-    icon: Zap,
-  },
-  {
-    value: "28%",
-    label: "Time Freed",
-    desc: "Your team focuses on what actually matters",
-    icon: Clock,
-  },
-];
+import { useTr } from "../../lib/LanguageContext";
 
 export default function ProofSlide({
   isActive,
 }: {
   isActive: boolean;
 }) {
+  const { tr, t } = useTr();
+
+  const securityBadges = [
+    { icon: ShieldCheck, label: tr(t.proof.casaVerified) },
+    { icon: Server, label: tr(t.proof.dataResidency) },
+    { icon: Scale, label: tr(t.proof.compliance) },
+  ];
+
+  const metrics = [
+    {
+      value: "99%",
+      label: tr(t.proof.fasterResponse),
+      desc: tr(t.proof.fasterResponseDesc),
+      icon: Zap,
+    },
+    {
+      value: "28%",
+      label: tr(t.proof.timeFreed),
+      desc: tr(t.proof.timeFreedDesc),
+      icon: Clock,
+    },
+  ];
+
   return (
     <SlideWrapper isActive={isActive} variant="white">
       <div className="w-full max-w-5xl mx-auto">
         <div className="text-center mb-3 md:mb-10">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
-            Trust & Results
+            {tr(t.proof.tag)}
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark">
-            Trusted by Teams.{" "}
-            <span className="gradient-text">Secured by Design.</span>
+            {tr(t.proof.titleStart)}{" "}
+            <span className="gradient-text">{tr(t.proof.titleHighlight)}</span>
           </h2>
         </div>
 
@@ -92,11 +95,10 @@ export default function ProofSlide({
           </div>
           <div>
             <p className="text-brand-slate text-xs md:text-base leading-snug md:leading-relaxed italic mb-1.5 md:mb-3">
-              &ldquo;Eloquens® AI feels like hiring a full-time assistant without the
-              overhead. Our response times dropped from hours to minutes.&rdquo;
+              &ldquo;{tr(t.proof.testimonial)}&rdquo;
             </p>
             <p className="text-[10px] md:text-sm text-brand-gray font-medium">
-              — Head of Customer Success, SaaS Platform (50K+ users)
+              {tr(t.proof.testimonialAuthor)}
             </p>
           </div>
         </div>

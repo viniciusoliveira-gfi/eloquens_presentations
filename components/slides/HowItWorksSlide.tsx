@@ -2,47 +2,34 @@
 
 import SlideWrapper from "../SlideWrapper";
 import { Link2, Settings, Database, Rocket } from "lucide-react";
-
-const steps = [
-  {
-    icon: Link2,
-    title: "Connect Your Inbox",
-    desc: "Works with Gmail, Outlook, or KerioConnect. Setup takes seconds.",
-  },
-  {
-    icon: Settings,
-    title: "Set Rules & Tone",
-    desc: "Define how Eloquens® AI should respond, escalate, or close emails.",
-  },
-  {
-    icon: Database,
-    title: "Add Your Knowledge",
-    desc: "Upload documents, FAQs, or connect approved content sources.",
-  },
-  {
-    icon: Rocket,
-    title: "Let Eloquens® AI Run",
-    desc: "Approve replies or enable auto-send. Start saving hours immediately.",
-  },
-];
+import { useTr } from "../../lib/LanguageContext";
 
 export default function HowItWorksSlide({
   isActive,
 }: {
   isActive: boolean;
 }) {
+  const { tr, t } = useTr();
+
+  const steps = [
+    { icon: Link2, title: tr(t.howItWorks.step1Title), desc: tr(t.howItWorks.step1Desc) },
+    { icon: Settings, title: tr(t.howItWorks.step2Title), desc: tr(t.howItWorks.step2Desc) },
+    { icon: Database, title: tr(t.howItWorks.step3Title), desc: tr(t.howItWorks.step3Desc) },
+    { icon: Rocket, title: tr(t.howItWorks.step4Title), desc: tr(t.howItWorks.step4Desc) },
+  ];
+
   return (
     <SlideWrapper isActive={isActive} variant="soft">
       <div className="w-full max-w-5xl mx-auto">
         <div className="text-center mb-3 md:mb-12">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
-            Getting Started
+            {tr(t.howItWorks.tag)}
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1 md:mb-4">
-            How It <span className="gradient-text">Works</span>
+            {tr(t.howItWorks.titleStart)} <span className="gradient-text">{tr(t.howItWorks.titleHighlight)}</span>
           </h2>
           <p className="text-xs md:text-lg text-brand-gray">
-            Create your email assistant in minutes.
+            {tr(t.howItWorks.subtitle)}
           </p>
         </div>
 
@@ -72,7 +59,7 @@ export default function HowItWorksSlide({
           <div className="inline-flex items-center gap-1.5 md:gap-2 px-3 py-2 md:px-5 md:py-3 rounded-full bg-white border border-blue-200 text-brand-accent font-semibold text-xs md:text-sm shadow-sm">
             <Link2 size={14} className="md:hidden" />
             <Link2 size={16} className="hidden md:block" />
-            Connect Your Inbox →
+            {tr(t.howItWorks.connectCta)}
           </div>
         </div>
       </div>

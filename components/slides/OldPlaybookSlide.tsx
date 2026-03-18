@@ -8,23 +8,26 @@ import {
   Users,
   DollarSign,
 } from "lucide-react";
+import { useTr } from "../../lib/LanguageContext";
 
 export default function OldPlaybookSlide({
   isActive,
 }: {
   isActive: boolean;
 }) {
+  const { tr, t } = useTr();
+
   return (
     <SlideWrapper isActive={isActive} variant="white">
       <div className="w-full max-w-5xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-3 md:mb-10">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
-            The Reality
+            {tr(t.oldPlaybook.tag)}
           </p>
           <h2 className="text-xl sm:text-3xl md:text-[2.75rem] font-bold text-brand-dark leading-tight">
-            Every Business Must Do More with{" "}
-            <span className="gradient-text">Less.</span>
+            {tr(t.oldPlaybook.titleStart)}{" "}
+            <span className="gradient-text">{tr(t.oldPlaybook.titleHighlight)}</span>
           </h2>
         </div>
 
@@ -38,14 +41,14 @@ export default function OldPlaybookSlide({
                 <Clock size={18} className="text-brand-accent hidden md:block" />
               </div>
               <p className="text-[9px] md:text-xs font-semibold text-brand-accent uppercase tracking-wider">
-                Customers Expect
+                {tr(t.oldPlaybook.customersExpect)}
               </p>
             </div>
             <p className="text-lg md:text-3xl font-extrabold text-brand-dark mb-0.5 md:mb-1">
               &lt; 10 min
             </p>
             <p className="text-[10px] md:text-sm text-brand-gray leading-snug md:leading-relaxed hidden md:block">
-              90% rate an immediate response as essential when they reach out.
+              {tr(t.oldPlaybook.customersExpectDesc)}
             </p>
           </div>
 
@@ -57,14 +60,14 @@ export default function OldPlaybookSlide({
                 <Timer size={18} className="text-red-400 hidden md:block" />
               </div>
               <p className="text-[9px] md:text-xs font-semibold text-red-400 uppercase tracking-wider">
-                Businesses Deliver
+                {tr(t.oldPlaybook.businessesDeliver)}
               </p>
             </div>
             <p className="text-lg md:text-3xl font-extrabold text-brand-dark mb-0.5 md:mb-1">
               12+ hours
             </p>
             <p className="text-[10px] md:text-sm text-brand-gray leading-snug md:leading-relaxed hidden md:block">
-              The average email sits over half a day before anyone replies.
+              {tr(t.oldPlaybook.businessesDeliverDesc)}
             </p>
           </div>
 
@@ -76,14 +79,14 @@ export default function OldPlaybookSlide({
                 <TrendingDown size={18} className="text-red-400 hidden md:block" />
               </div>
               <p className="text-[9px] md:text-xs font-semibold text-red-400 uppercase tracking-wider">
-                The Result
+                {tr(t.oldPlaybook.theResult)}
               </p>
             </div>
             <p className="text-lg md:text-3xl font-extrabold text-brand-dark mb-0.5 md:mb-1">
               58%
             </p>
             <p className="text-[10px] md:text-sm text-brand-gray leading-snug md:leading-relaxed hidden md:block">
-              of consumers switch brands after poor service. Slow replies cost you customers.
+              {tr(t.oldPlaybook.theResultDesc)}
             </p>
           </div>
         </div>
@@ -98,11 +101,11 @@ export default function OldPlaybookSlide({
                 <Users size={17} className="text-amber-500 hidden md:block" />
               </div>
               <span className="text-xs md:text-sm font-bold text-brand-dark">
-                Teams Are Maxed Out
+                {tr(t.oldPlaybook.teamsMaxed)}
               </span>
             </div>
             <p className="text-[10px] md:text-sm text-brand-gray leading-snug md:leading-relaxed">
-              Email already demands too much time. The volume keeps growing — the capacity doesn&apos;t.
+              {tr(t.oldPlaybook.teamsMaxedDesc)}
             </p>
           </div>
 
@@ -114,11 +117,11 @@ export default function OldPlaybookSlide({
                 <DollarSign size={17} className="text-amber-500 hidden md:block" />
               </div>
               <span className="text-xs md:text-sm font-bold text-brand-dark">
-                Can&apos;t Hire Your Way Out
+                {tr(t.oldPlaybook.cantHire)}
               </span>
             </div>
             <p className="text-[10px] md:text-sm text-brand-gray leading-snug md:leading-relaxed">
-              Additional headcount is expensive. Every team is being asked to do more with less.
+              {tr(t.oldPlaybook.cantHireDesc)}
             </p>
           </div>
         </div>
@@ -128,9 +131,9 @@ export default function OldPlaybookSlide({
           <div className="inline-block max-w-2xl">
             <div className="w-12 h-px bg-gradient-to-r from-transparent via-brand-accent to-transparent mx-auto mb-2 md:mb-5 opacity-40" />
             <p className="text-xs md:text-base lg:text-lg text-brand-slate leading-relaxed">
-              The old playbook doesn&apos;t work.{" "}
+              {tr(t.oldPlaybook.bottomStart)}{" "}
               <span className="font-semibold gradient-text">
-                Businesses need something fundamentally different.
+                {tr(t.oldPlaybook.bottomHighlight)}
               </span>
             </p>
           </div>

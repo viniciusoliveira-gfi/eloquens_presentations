@@ -11,22 +11,39 @@ import {
   EyeOff,
   Clock,
 } from "lucide-react";
+import { useTr } from "../../lib/LanguageContext";
 
 export default function EmailMattersSlide({
   isActive,
 }: {
   isActive: boolean;
 }) {
+  const { tr, t } = useTr();
+
+  const positiveItems = [
+    { icon: Handshake, text: tr(t.emailMatters.salesConversations) },
+    { icon: HeartHandshake, text: tr(t.emailMatters.supportLoyal) },
+    { icon: FileSignature, text: tr(t.emailMatters.contracts) },
+    { icon: Landmark, text: tr(t.emailMatters.decisions) },
+  ];
+
+  const negativeItems = [
+    { icon: Inbox, text: tr(t.emailMatters.endlessInbox) },
+    { icon: Clock, text: tr(t.emailMatters.hoursSpent) },
+    { icon: EyeOff, text: tr(t.emailMatters.buriedEmails) },
+    { icon: Brain, text: tr(t.emailMatters.bestHours) },
+  ];
+
   return (
     <SlideWrapper isActive={isActive} variant="soft">
       <div className="w-full">
         <div className="text-center mb-3 md:mb-10">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
-            The Paradox
+            {tr(t.emailMatters.tag)}
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark">
-            When It Matters, It Happens Over{" "}
-            <span className="gradient-text">Email</span>
+            {tr(t.emailMatters.titleStart)}{" "}
+            <span className="gradient-text">{tr(t.emailMatters.titleHighlight)}</span>
           </h2>
         </div>
 
@@ -36,16 +53,11 @@ export default function EmailMattersSlide({
             <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-6">
               <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-brand-accent" />
               <h3 className="text-sm md:text-lg font-bold text-brand-dark">
-                The Most Important Business Channel
+                {tr(t.emailMatters.importantChannel)}
               </h3>
             </div>
             <div className="space-y-2 md:space-y-4">
-              {[
-                { icon: Handshake, text: "Sales conversations that close deals" },
-                { icon: HeartHandshake, text: "Support that keeps customers loyal" },
-                { icon: FileSignature, text: "Contracts and partnerships" },
-                { icon: Landmark, text: "Important decisions" },
-              ].map((item, i) => (
+              {positiveItems.map((item, i) => (
                 <div key={i} className="flex items-center gap-2 md:gap-3">
                   <div className="icon-box !w-7 !h-7 md:!w-10 md:!h-10 !rounded-lg">
                     <item.icon size={13} className="text-brand-accent md:hidden" />
@@ -64,16 +76,11 @@ export default function EmailMattersSlide({
             <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-6">
               <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-red-400" />
               <h3 className="text-sm md:text-lg font-bold text-brand-dark">
-                But It&apos;s Crushing Your Team
+                {tr(t.emailMatters.crushing)}
               </h3>
             </div>
             <div className="space-y-2 md:space-y-4">
-              {[
-                { icon: Inbox, text: "Endless inbox, constant context-switching" },
-                { icon: Clock, text: "Hours spent reading, sorting, replying" },
-                { icon: EyeOff, text: "Important emails buried under noise" },
-                { icon: Brain, text: "Your team's best hours, gone" },
-              ].map((item, i) => (
+              {negativeItems.map((item, i) => (
                 <div key={i} className="flex items-center gap-2 md:gap-3">
                   <div className="w-7 h-7 md:w-10 md:h-10 rounded-lg bg-red-50 border border-red-100 flex items-center justify-center flex-shrink-0">
                     <item.icon size={13} className="text-red-400 md:hidden" />
@@ -93,7 +100,7 @@ export default function EmailMattersSlide({
           <div className="inline-flex items-center gap-2 md:gap-3 px-3 py-2 md:px-6 md:py-3 rounded-full bg-white border border-gray-200 shadow-sm">
             <span className="text-lg md:text-2xl font-bold gradient-text">28%</span>
             <span className="text-xs md:text-sm text-brand-gray">
-              of the workday spent on email — and still can&apos;t keep up.
+              {tr(t.emailMatters.bottomStat)}
             </span>
           </div>
         </div>

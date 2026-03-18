@@ -3,60 +3,7 @@
 import { useState } from "react";
 import SlideWrapper from "../SlideWrapper";
 import { MessageSquareText, PenLine, BrainCircuit } from "lucide-react";
-
-const levels = [
-  {
-    level: 1,
-    icon: MessageSquareText,
-    title: "Templated Auto-Replies",
-    era: "2000s",
-    desc: "Canned responses. No personalization. Customers feel ignored and relationships deteriorate.",
-    color: {
-      bg: "bg-red-50",
-      border: "border-red-300",
-      ring: "ring-red-200",
-      iconBg: "bg-red-500",
-      eraBg: "bg-red-500",
-      text: "text-red-700",
-      label: "text-red-400",
-      shadow: "shadow-red-100",
-    },
-  },
-  {
-    level: 2,
-    icon: PenLine,
-    title: "AI Draft Generation",
-    era: "2023\u201324",
-    desc: "Copilot, Gemini, HubSpot AI. They draft, you review, you rewrite. Still manual. Still slow.",
-    color: {
-      bg: "bg-amber-50",
-      border: "border-amber-300",
-      ring: "ring-amber-200",
-      iconBg: "bg-amber-500",
-      eraBg: "bg-amber-500",
-      text: "text-amber-700",
-      label: "text-amber-400",
-      shadow: "shadow-amber-100",
-    },
-  },
-  {
-    level: 3,
-    icon: BrainCircuit,
-    title: "Autonomous Email Agents",
-    era: "Eloquens\u00ae",
-    desc: "Reads, understands, replies, takes action. End-to-end resolutions.",
-    color: {
-      bg: "bg-emerald-50",
-      border: "border-emerald-300",
-      ring: "ring-emerald-200",
-      iconBg: "bg-emerald-600",
-      eraBg: "bg-emerald-600",
-      text: "text-emerald-700",
-      label: "text-emerald-500",
-      shadow: "shadow-emerald-100",
-    },
-  },
-];
+import { useTr } from "../../lib/LanguageContext";
 
 export default function ThreeLevelsSlide({
   isActive,
@@ -64,6 +11,61 @@ export default function ThreeLevelsSlide({
   isActive: boolean;
 }) {
   const [selected, setSelected] = useState<number | null>(1);
+  const { tr, t } = useTr();
+
+  const levels = [
+    {
+      level: 1,
+      icon: MessageSquareText,
+      title: tr(t.threeLevels.level1Title),
+      era: "2000s",
+      desc: tr(t.threeLevels.level1Desc),
+      color: {
+        bg: "bg-red-50",
+        border: "border-red-300",
+        ring: "ring-red-200",
+        iconBg: "bg-red-500",
+        eraBg: "bg-red-500",
+        text: "text-red-700",
+        label: "text-red-400",
+        shadow: "shadow-red-100",
+      },
+    },
+    {
+      level: 2,
+      icon: PenLine,
+      title: tr(t.threeLevels.level2Title),
+      era: "2023\u201324",
+      desc: tr(t.threeLevels.level2Desc),
+      color: {
+        bg: "bg-amber-50",
+        border: "border-amber-300",
+        ring: "ring-amber-200",
+        iconBg: "bg-amber-500",
+        eraBg: "bg-amber-500",
+        text: "text-amber-700",
+        label: "text-amber-400",
+        shadow: "shadow-amber-100",
+      },
+    },
+    {
+      level: 3,
+      icon: BrainCircuit,
+      title: tr(t.threeLevels.level3Title),
+      era: "Eloquens\u00ae",
+      desc: tr(t.threeLevels.level3Desc),
+      color: {
+        bg: "bg-emerald-50",
+        border: "border-emerald-300",
+        ring: "ring-emerald-200",
+        iconBg: "bg-emerald-600",
+        eraBg: "bg-emerald-600",
+        text: "text-emerald-700",
+        label: "text-emerald-500",
+        shadow: "shadow-emerald-100",
+      },
+    },
+  ];
 
   const handleClick = (level: number) => {
     setSelected(selected === level ? null : level);
@@ -75,11 +77,11 @@ export default function ThreeLevelsSlide({
         {/* Section header */}
         <div className="text-center mb-3 md:mb-10">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
-            AI is the Answer, but
+            {tr(t.threeLevels.tag)}
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark">
-            Draft-Only AI Is{" "}
-            <span className="gradient-text">Not Enough.</span>
+            {tr(t.threeLevels.titleStart)}{" "}
+            <span className="gradient-text">{tr(t.threeLevels.titleHighlight)}</span>
           </h2>
         </div>
 
@@ -187,7 +189,7 @@ export default function ThreeLevelsSlide({
                       }
                     `}
                   >
-                    Level {item.level}
+                    {tr(t.threeLevels.level)} {item.level}
                   </span>
                 </div>
               </div>
@@ -198,7 +200,7 @@ export default function ThreeLevelsSlide({
         {/* Bottom hint */}
         <div className="text-center mt-3 md:mt-6">
           <p className="text-[10px] md:text-xs text-gray-400 tracking-wide">
-            Click each level to explore
+            {tr(t.threeLevels.hint)}
           </p>
         </div>
       </div>

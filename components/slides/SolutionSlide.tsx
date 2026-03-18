@@ -3,47 +3,34 @@
 import SlideWrapper from "../SlideWrapper";
 import Image from "next/image";
 import { Brain, Lightbulb, Mic2, BarChart3 } from "lucide-react";
-
-const capabilities = [
-  {
-    icon: Brain,
-    title: "Reads & Understands",
-    summary: "160+ languages, intent capture, sentiment analysis",
-  },
-  {
-    icon: Lightbulb,
-    title: "Thinks & Decides",
-    summary: "Smart filters, knowledge lookup, routing logic",
-  },
-  {
-    icon: Mic2,
-    title: "Writes in Your Voice",
-    summary: "Brand voice matching, custom personas, tone consistency",
-  },
-  {
-    icon: BarChart3,
-    title: "Learns & Improves",
-    summary: "Self-learning engine, performance tracking, continuous refinement",
-  },
-];
+import { useTr } from "../../lib/LanguageContext";
 
 export default function SolutionSlide({
   isActive,
 }: {
   isActive: boolean;
 }) {
+  const { tr, t } = useTr();
+
+  const capabilities = [
+    { icon: Brain, title: tr(t.solution.cap1Title), summary: tr(t.solution.cap1Desc) },
+    { icon: Lightbulb, title: tr(t.solution.cap2Title), summary: tr(t.solution.cap2Desc) },
+    { icon: Mic2, title: tr(t.solution.cap3Title), summary: tr(t.solution.cap3Desc) },
+    { icon: BarChart3, title: tr(t.solution.cap4Title), summary: tr(t.solution.cap4Desc) },
+  ];
+
   return (
     <SlideWrapper isActive={isActive} variant="white">
       <div className="w-full max-w-5xl mx-auto">
         <div className="text-center mb-3 md:mb-10">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1 md:mb-3">
-            The Solution
+            {tr(t.solution.tag)}
           </p>
           <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-brand-dark mb-1.5 md:mb-4">
-            Meet <span className="gradient-text">Eloquens® AI</span>
+            {tr(t.solution.titleStart)} <span className="gradient-text">Eloquens® AI</span>
           </h2>
           <p className="text-sm md:text-lg text-brand-gray max-w-xl mx-auto">
-            The best email assistant in the world
+            {tr(t.solution.subtitle)}
           </p>
         </div>
 

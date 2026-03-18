@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import { LanguageProvider } from "../lib/LanguageContext";
 import ProgressBar from "./ProgressBar";
 import Navigation from "./Navigation";
+import LanguageToggle from "./LanguageToggle";
 import HeroSlide from "./slides/HeroSlide";
 import EmailMattersSlide from "./slides/EmailMattersSlide";
 import OldPlaybookSlide from "./slides/OldPlaybookSlide";
@@ -95,32 +97,35 @@ export default function Presentation() {
   }, [next, prev]);
 
   return (
-    <div className="w-screen overflow-hidden bg-white" style={{ height: '100dvh' }}>
-      <ProgressBar current={current} total={TOTAL_SLIDES} />
-      <Navigation
-        current={current}
-        total={TOTAL_SLIDES}
-        onPrev={prev}
-        onNext={next}
-        onGoTo={goTo}
-      />
+    <LanguageProvider>
+      <div className="w-screen overflow-hidden bg-white" style={{ height: '100dvh' }}>
+        <LanguageToggle />
+        <ProgressBar current={current} total={TOTAL_SLIDES} />
+        <Navigation
+          current={current}
+          total={TOTAL_SLIDES}
+          onPrev={prev}
+          onNext={next}
+          onGoTo={goTo}
+        />
 
-      <div
-        className="slide-container"
-        style={{ transform: `translateX(-${current * 100}vw)` }}
-      >
-        <HeroSlide isActive={current === 0} onNext={next} />
-        <EmailMattersSlide isActive={current === 1} />
-        <OldPlaybookSlide isActive={current === 2} />
-        <ThreeLevelsSlide isActive={current === 3} />
-        <SolutionSlide isActive={current === 4} />
-        <TrustSlide isActive={current === 5} />
-        <VoiceSlide isActive={current === 6} />
-        <HowItWorksSlide isActive={current === 7} />
-        <ProcessSlide isActive={current === 8} />
-        <ProofSlide isActive={current === 9} />
-        <CTASlide isActive={current === 10} />
+        <div
+          className="slide-container"
+          style={{ transform: `translateX(-${current * 100}vw)` }}
+        >
+          <HeroSlide isActive={current === 0} onNext={next} />
+          <EmailMattersSlide isActive={current === 1} />
+          <OldPlaybookSlide isActive={current === 2} />
+          <ThreeLevelsSlide isActive={current === 3} />
+          <SolutionSlide isActive={current === 4} />
+          <TrustSlide isActive={current === 5} />
+          <VoiceSlide isActive={current === 6} />
+          <HowItWorksSlide isActive={current === 7} />
+          <ProcessSlide isActive={current === 8} />
+          <ProofSlide isActive={current === 9} />
+          <CTASlide isActive={current === 10} />
+        </div>
       </div>
-    </div>
+    </LanguageProvider>
   );
 }

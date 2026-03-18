@@ -22,18 +22,11 @@ import {
   UserCheck,
   Sparkles,
 } from "lucide-react";
-
-/* ───────────────── Step definitions ───────────────── */
-const steps = [
-  { id: 1, label: "Email Received", icon: Mail },
-  { id: 2, label: "Smart Filters", icon: Filter },
-  { id: 3, label: "Knowledge Base", icon: BookOpen },
-  { id: 4, label: "Routing", icon: GitBranch },
-  { id: 5, label: "Response", icon: PenTool },
-];
+import { useTr } from "../../lib/LanguageContext";
+import type { Lang } from "../../lib/translations";
 
 /* ──────────────────── Step 1 ──────────────────── */
-function EmailReceivedPanel() {
+function EmailReceivedPanel({ tr, t }: { tr: (e: Record<Lang, string>) => string; t: any }) {
   return (
     <div className="w-full max-w-lg mx-auto px-1 md:px-0">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
@@ -49,7 +42,7 @@ function EmailReceivedPanel() {
             </div>
           </div>
           <span className="px-2.5 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] md:text-sm font-bold uppercase tracking-wide">
-            New
+            {tr(t.process.newBadge)}
           </span>
         </div>
         {/* subject */}
@@ -73,7 +66,7 @@ function EmailReceivedPanel() {
         </div>
         {/* bottom bar */}
         <div className="px-3 py-2 md:px-5 md:py-3 border-t border-gray-100 bg-gray-50/40 flex items-center gap-3 text-xs md:text-sm text-brand-gray">
-          <Clock size={12} /> <span>Received 2 min ago</span>
+          <Clock size={12} /> <span>{tr(t.process.received)}</span>
           <span className="w-px h-3 bg-gray-200" />
           <Mail size={12} /> <span>brett@exinda.com</span>
         </div>
@@ -83,39 +76,38 @@ function EmailReceivedPanel() {
 }
 
 /* ──────────────────── Step 2 ──────────────────── */
-function SmartFiltersPanel() {
+function SmartFiltersPanel({ tr, t }: { tr: (e: Record<Lang, string>) => string; t: any }) {
   return (
     <div className="w-full max-w-lg mx-auto px-1 md:px-0">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
         <div className="px-3 py-2.5 md:px-5 md:py-4 border-b border-gray-100 flex items-center justify-between">
           <span className="text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
             <Sparkles size={16} className="text-brand-accent" />
-            Email Analysis
+            {tr(t.process.emailAnalysis)}
           </span>
           <span className="px-3 py-1 rounded-full bg-green-100 text-green-700 text-[10px] md:text-sm font-bold uppercase tracking-wide">
-            Approved for Response
+            {tr(t.process.approvedForResponse)}
           </span>
         </div>
         <div className="px-3 py-2.5 md:px-5 md:py-5 space-y-4">
-          {/* analysis rows */}
           {[
             {
-              label: "Intent",
-              value: "Follow-up / Scheduling",
+              label: tr(t.process.intent),
+              value: tr(t.process.followUpScheduling),
               icon: TrendingUp,
               color: "text-brand-accent",
               bg: "bg-blue-50",
             },
             {
-              label: "Urgency",
-              value: "Medium",
+              label: tr(t.process.urgency),
+              value: tr(t.process.medium),
               icon: Clock,
               color: "text-yellow-600",
               bg: "bg-yellow-50",
             },
             {
-              label: "Sentiment",
-              value: "Positive",
+              label: tr(t.process.sentiment),
+              value: tr(t.process.positive),
               icon: SmilePlus,
               color: "text-green-600",
               bg: "bg-green-50",
@@ -134,8 +126,7 @@ function SmartFiltersPanel() {
         </div>
         <div className="px-3 py-2 md:px-5 md:py-3 border-t border-gray-100 bg-gray-50/40">
           <p className="text-xs md:text-sm text-brand-gray italic">
-            &ldquo;Business email requiring a scheduling follow-up with pricing
-            clarification.&rdquo;
+            &ldquo;{tr(t.process.analysisQuote)}&rdquo;
           </p>
         </div>
       </div>
@@ -144,7 +135,7 @@ function SmartFiltersPanel() {
 }
 
 /* ──────────────────── Step 3 ──────────────────── */
-function KnowledgeBasePanel() {
+function KnowledgeBasePanel({ tr, t }: { tr: (e: Record<Lang, string>) => string; t: any }) {
   const sources = [
     { name: "Renewal Pricing 2024-2025", match: 96 },
     { name: "Contract Terms & SLA", match: 89 },
@@ -156,7 +147,7 @@ function KnowledgeBasePanel() {
         <div className="px-3 py-2.5 md:px-5 md:py-4 border-b border-gray-100 flex items-center justify-between">
           <span className="text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
             <Database size={16} className="text-brand-accent" />
-            Knowledge Search
+            {tr(t.process.knowledgeSearch)}
           </span>
           <Search size={16} className="text-brand-gray" />
         </div>
@@ -165,20 +156,20 @@ function KnowledgeBasePanel() {
           <div className="text-center">
             <p className="text-xl md:text-2xl font-bold gradient-text">9</p>
             <p className="text-xs md:text-sm text-brand-gray uppercase tracking-wide">
-              Sources Searched
+              {tr(t.process.sourcesSearched)}
             </p>
           </div>
           <div className="text-center">
             <p className="text-xl md:text-2xl font-bold gradient-text">8</p>
             <p className="text-xs md:text-sm text-brand-gray uppercase tracking-wide">
-              Matches Found
+              {tr(t.process.matchesFound)}
             </p>
           </div>
         </div>
         {/* top matches */}
         <div className="px-3 py-2.5 md:px-5 md:py-4 space-y-3">
           <p className="text-[10px] md:text-sm text-brand-gray uppercase tracking-wide font-medium mb-1">
-            Top Matches
+            {tr(t.process.topMatches)}
           </p>
           {sources.map((s, i) => (
             <div
@@ -211,10 +202,10 @@ function KnowledgeBasePanel() {
 }
 
 /* ──────────────────── Step 4 ──────────────────── */
-function RoutingPanel() {
+function RoutingPanel({ tr, t }: { tr: (e: Record<Lang, string>) => string; t: any }) {
   const options = [
     {
-      label: "Escalate",
+      label: tr(t.process.escalate),
       icon: ArrowUpRight,
       selected: false,
       color: "text-orange-500",
@@ -222,7 +213,7 @@ function RoutingPanel() {
       border: "border-orange-100",
     },
     {
-      label: "Handover",
+      label: tr(t.process.handover),
       icon: UserCheck,
       selected: false,
       color: "text-purple-500",
@@ -230,7 +221,7 @@ function RoutingPanel() {
       border: "border-purple-100",
     },
     {
-      label: "Reply",
+      label: tr(t.process.reply),
       icon: SendIcon,
       selected: true,
       color: "text-brand-accent",
@@ -245,7 +236,7 @@ function RoutingPanel() {
         <div className="px-3 py-2.5 md:px-5 md:py-4 border-b border-gray-100">
           <span className="text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
             <GitBranch size={16} className="text-brand-accent" />
-            Routing Decision
+            {tr(t.process.routingDecision)}
           </span>
         </div>
         {/* options */}
@@ -289,7 +280,7 @@ function RoutingPanel() {
           </div>
           <div className="flex items-center justify-between">
             <span className="text-[10px] md:text-sm text-brand-gray uppercase tracking-wide font-medium">
-              Confidence
+              {tr(t.process.confidence)}
             </span>
             <div className="flex items-center gap-2">
               <div className="w-20 h-1.5 rounded-full bg-gray-200 overflow-hidden">
@@ -305,14 +296,14 @@ function RoutingPanel() {
 }
 
 /* ──────────────────── Step 5 ──────────────────── */
-function ResponsePanel() {
+function ResponsePanel({ tr, t }: { tr: (e: Record<Lang, string>) => string; t: any }) {
   return (
     <div className="w-full max-w-lg mx-auto px-1 md:px-0">
       <div className="bg-white rounded-2xl border border-gray-200 shadow-lg overflow-hidden">
         <div className="px-3 py-2 md:px-5 md:py-3 border-b border-gray-100 flex items-center justify-between bg-gray-50/40">
           <span className="text-xs md:text-sm font-semibold text-brand-dark flex items-center gap-2">
             <PenTool size={16} className="text-brand-accent" />
-            Draft Reply
+            {tr(t.process.draftReply)}
           </span>
           <span className="px-2.5 py-1 rounded-full bg-purple-100 text-purple-700 text-[10px] md:text-sm font-bold uppercase tracking-wide flex items-center gap-1">
             <Sparkles size={10} />
@@ -322,11 +313,11 @@ function ResponsePanel() {
         {/* meta */}
         <div className="px-3 py-2 md:px-5 md:py-3 border-b border-gray-50 space-y-1.5 text-xs md:text-sm text-brand-gray">
           <p>
-            <span className="font-medium text-brand-slate text-xs md:text-sm">To:</span> Brett
+            <span className="font-medium text-brand-slate text-xs md:text-sm">{tr(t.process.to)}</span> Brett
             Coleman &lt;brett@exinda.com&gt;
           </p>
           <p>
-            <span className="font-medium text-brand-slate text-xs md:text-sm">Subject:</span> RE:
+            <span className="font-medium text-brand-slate text-xs md:text-sm">{tr(t.process.subject)}</span> RE:
             Exinda — Renewal Status for 2024-2025 Support Contract
           </p>
         </div>
@@ -354,26 +345,17 @@ function ResponsePanel() {
         {/* footer */}
         <div className="px-3 py-2 md:px-5 md:py-3 border-t border-gray-100 bg-gray-50/40 flex items-center justify-between">
           <span className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-50 text-xs md:text-sm font-medium text-brand-accent">
-            Tone: Professional · Warm
+            {tr(t.process.toneLabel)}
           </span>
           <button className="flex items-center gap-1 md:gap-1.5 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-brand-accent text-white text-xs md:text-sm font-semibold shadow-sm">
             <SendIcon size={12} />
-            Send
+            {tr(t.process.send)}
           </button>
         </div>
       </div>
     </div>
   );
 }
-
-/* ──────────────────── PANELS MAP ──────────────────── */
-const panels = [
-  EmailReceivedPanel,
-  SmartFiltersPanel,
-  KnowledgeBasePanel,
-  RoutingPanel,
-  ResponsePanel,
-];
 
 /* ══════════════════════════════════════════════════════
    MAIN COMPONENT
@@ -384,6 +366,23 @@ export default function ProcessSlide({
   isActive: boolean;
 }) {
   const [activeStep, setActiveStep] = useState(0);
+  const { tr, t } = useTr();
+
+  const steps = [
+    { id: 1, label: tr(t.process.step1), icon: Mail },
+    { id: 2, label: tr(t.process.step2), icon: Filter },
+    { id: 3, label: tr(t.process.step3), icon: BookOpen },
+    { id: 4, label: tr(t.process.step4), icon: GitBranch },
+    { id: 5, label: tr(t.process.step5), icon: PenTool },
+  ];
+
+  const panels = [
+    () => <EmailReceivedPanel tr={tr} t={t} />,
+    () => <SmartFiltersPanel tr={tr} t={t} />,
+    () => <KnowledgeBasePanel tr={tr} t={t} />,
+    () => <RoutingPanel tr={tr} t={t} />,
+    () => <ResponsePanel tr={tr} t={t} />,
+  ];
 
   // Reset to step 0 every time slide becomes active
   useEffect(() => {
@@ -395,7 +394,7 @@ export default function ProcessSlide({
       e.stopPropagation();
       if (activeStep < steps.length - 1) setActiveStep((s) => s + 1);
     },
-    [activeStep]
+    [activeStep, steps.length]
   );
 
   const goPrev = useCallback(
@@ -406,19 +405,17 @@ export default function ProcessSlide({
     [activeStep]
   );
 
-  const ActivePanel = panels[activeStep];
-
   return (
     <SlideWrapper isActive={isActive} variant="white">
       <div className="w-full max-w-5xl mx-auto flex flex-col h-full justify-center py-4 md:py-10">
         {/* Header */}
         <div className="text-center mb-2 md:mb-6">
           <p className="text-[10px] md:text-sm font-semibold text-brand-accent uppercase tracking-wider mb-1">
-            Inside the Engine
+            {tr(t.process.tag)}
           </p>
           <h2 className="text-lg sm:text-3xl md:text-4xl font-bold text-brand-dark">
-            How Eloquens® AI{" "}
-            <span className="gradient-text">Thinks & Decides</span>
+            {tr(t.process.titleStart)}{" "}
+            <span className="gradient-text">{tr(t.process.titleHighlight)}</span>
           </h2>
         </div>
 
@@ -480,7 +477,7 @@ export default function ProcessSlide({
             key={activeStep}
             className="w-full animate-fadeSlide"
           >
-            <ActivePanel />
+            {panels[activeStep]()}
           </div>
         </div>
 
@@ -497,7 +494,7 @@ export default function ProcessSlide({
           >
             <ChevronLeft size={14} className="md:hidden" />
             <ChevronLeft size={16} className="hidden md:block" />
-            Previous
+            {tr(t.process.previous)}
           </button>
 
           <span className="text-xs md:text-sm text-brand-gray font-medium px-1 md:px-2">
@@ -513,7 +510,7 @@ export default function ProcessSlide({
                 : "bg-brand-accent text-white hover:bg-brand-deep shadow-md shadow-blue-200"
             }`}
           >
-            Next Step
+            {tr(t.process.nextStep)}
             <ChevronRight size={14} className="md:hidden" />
             <ChevronRight size={16} className="hidden md:block" />
           </button>
